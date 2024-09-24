@@ -12,7 +12,7 @@ using namespace std;
 int main()
 {
 	//短整型2
-	short range1 = -32769;
+	short range1 = -32768;
 	cout << range1 << endl;
 	std::cout << "hello C++" << std::endl;
 	std::cin.get();//获取一次按键输入
