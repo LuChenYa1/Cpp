@@ -62,6 +62,7 @@
         "gleam": "gleam run -m $fileNameWithoutExt"
     },
     "files.associations": {
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "iostream": "cpp"
     }
 }
