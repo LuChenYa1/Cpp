@@ -63,6 +63,7 @@
     },
     "files.associations": {
         "ostream": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "new": "cpp"
     }
 }

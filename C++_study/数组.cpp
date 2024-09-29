@@ -10,7 +10,7 @@ int main(void)
 	cout << sizeof(array) / 4 << endl;
 	cout << &array[0] << endl;
 	cout << &array[1] << endl;
-	cout << sizeof(&array[2]) << endl;//电脑系统指针8字节
+	cout << sizeof(&array[2]) << endl;//* 电脑系统指针8字节
 
 	int array2[][3] = {1, 3, 5, 7, 9, 11};
 	cout << array2[1][2] << endl;

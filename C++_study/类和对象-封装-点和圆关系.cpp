@@ -1,10 +1,8 @@
 #include <iostream>
-#include "Point.h"
-#include "Circle.h"
-// #include "Multi_Func/Circle.h" 不加父级文件夹也不会报错
+#include "Multi_Func/Point.h"
+#include "Multi_Func/Circle.h"
 
 using namespace std;
-
 
 void isInCircle(Circle C, Point P)
 {

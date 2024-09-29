@@ -4,7 +4,7 @@
 
 using namespace std;
 
-//C++ cout 自动换行
+//C++ cout endline 换行
 int main()
 {
 	cout << "一周共有" << DAY << "天" << endl;
