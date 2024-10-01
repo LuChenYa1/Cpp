@@ -41,6 +41,11 @@ public:
         pHeight = new int (Height);
         cout << "Person 有参/普通构造函数！" << endl;
     }
+    Person(int a)
+    {
+        Age = a;
+        cout << "Person 隐式转换法调用有参构造函数" << endl;
+    }
 
     Person(const Person &p)//拷贝构造函数不允许形参创建新的空间（可能会套娃），所以只能采取引用
     {
@@ -84,7 +89,7 @@ void Test_01(void)
     // Person(p3);//不要利用拷贝构造函数初始化匿名对象且不赋值给有名字的对象，编译器认为 Person(p3) === Person p3，导致重定义错误
 
     //* 3、隐式转换法
-    // Person p6 = 30,160;
+    Person p6 = 30;
     Person p7 = p4;
 }
 
@@ -112,7 +117,7 @@ void Test_02()
 
 int main(void)
 {
-    // Test_01();
+    Test_01();
 
     Person p(10, 160);
     Person p2(p);
