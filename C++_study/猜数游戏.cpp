@@ -11,8 +11,8 @@ int main(void)
 	string repeat;
 	srand((unsigned int)time(NULL));
 	num = rand() % 100 + 1;
-	cout << "猜数游戏：范围0 < num <= 100" << endl;
-	cout << "是否进入游戏？yes or no" << endl;
+	cout << "猜数游戏:范围0 < num <= 100" << endl;
+	cout << "是否进入游戏?yes or no" << endl;
 	cin >> repeat;
 	if (repeat == "no")cout << "期待下次相遇" << endl;
 

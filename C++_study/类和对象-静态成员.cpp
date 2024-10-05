@@ -20,7 +20,6 @@ public:
         // C = 222;
         cout << "静态成员函数调用" << endl;
     }
-
 private:
     static int B;
 };

@@ -11,6 +11,23 @@ using namespace std;
 //* 属性  成员属性 成员变量
 //* 行为  成员方法 成员函数
 
+//! 由类实例化一个对象，若该对象是空对象，则占一个字节
+//* 所有静态成员通通存储在全局区，直属于类
+//* 非静态成员中，只有成员变量存储在对象空间里
+
+class Person
+{
+    //* 测试空对象占字节大小：1个
+};
+class Person1//* 该对象占四个字节
+{
+    int a;
+    void Func(void)
+    {
+        //! 成员函数不占对象空间
+    }
+};
+
 const double PI = 3.14;
 
 class Circle
@@ -55,6 +72,9 @@ class Student
 
 int main(void)
 {
+    Person1 p;
+    cout << "Person p 占" << sizeof(p) << "个字节" << endl;
+
     //* 通过类，创建具体的对象
     //* 实例化 
     Circle C1;
