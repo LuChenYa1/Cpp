@@ -25,14 +25,15 @@ int main()
 			break;
 		case 1: //添加职工
 			wm.Add_Emp();
-			wm.save();
 			break;
 		case 2: //显示职工
-		
+			wm.Show_Worker();
 			break;
 		case 3: //删除职工
+			wm.Del_Worker();
 			break;
 		case 4: //修改职工
+			wm.Mod_Worker();
 			break;
 		case 5: //查找职工
 			break;

@@ -2,11 +2,51 @@
 
 WorkerManager::WorkerManager()
 {
-	//初始化人数
-	this->m_WorkerNum = 0;
+	ifstream ifs;
+	ifs.open(FILENAME, ios::in);
 
-	//初始化数组指针
-	this->m_WorkerArray = NULL;
+	//文件不存在情况
+	if (!ifs.is_open())
+	{
+		cout << "文件不存在" << endl; //测试输出
+		this->m_WorkerNum = 0;  //初始化人数
+		this->m_FileIsEmpty = true; //初始化文件为空标志
+		this->m_WorkerArray = NULL; //初始化数组
+		ifs.close(); //关闭文件
+		return;
+	}
+	//文件存在，并且没有记录
+	char ch;
+	ifs >> ch;
+	if (ifs.eof())
+	{
+		cout << "文件为空!" << endl;
+		this->m_WorkerNum = 0;
+		this->m_FileIsEmpty = true;
+		this->m_WorkerArray = NULL;
+		ifs.close();
+		return;
+	}
+	//文件存在，且不空
+	//读取文件从而更新职工人数
+	this->m_FileIsEmpty = false;
+	int num =  this->get_WorkerNum();
+	cout << "您好，当前职工个数为：" << num << endl;  //测试代码
+	this->m_WorkerNum = num;  //更新成员属性 
+
+	//读取文件从而更新存储职工对象指针的数组
+	//根据职工数创建数组
+	this->m_WorkerArray = new Worker *[this->m_WorkerNum];
+	//初始化职工
+	init_Worker();
+
+	//测试代码
+	for (int i = 0; i < m_WorkerNum; i++)
+	{
+		cout << "职工号： " << this->m_WorkerArray[i]->m_Id
+			<< " 职工姓名： " << this->m_WorkerArray[i]->m_Name
+			<< " 部门编号： " << this->m_WorkerArray[i]->m_DeptId << endl;
+	}
 }
 
 //显示菜单
@@ -107,14 +147,19 @@ void WorkerManager::Add_Emp()
 
 		//提示信息
 		cout << "成功添加" << addNum << "名新职工！" << endl;
+
+		//更新职工不为空标志
+		this->m_FileIsEmpty = false;
 	}
 	else
 	{
 		cout << "输入错误" << endl;
 	}
 
-	system("pause");
-	system("cls");
+	save();
+
+	system("pause");//程序中断，按任意键继续运行
+	system("cls");//这个命令用于清除命令行界面（即终端或命令提示符窗口）的屏幕
 }
 
 //保存职工信息到文件中
@@ -122,7 +167,7 @@ void WorkerManager::save()
 {
 	ofstream ofs;
 	ofs.open(FILENAME, ios::out);
-
+	
 	for (int i = 0; i < this->m_WorkerNum; i++)
 	{
 		ofs << this->m_WorkerArray[i]->m_Id << " " 
@@ -130,6 +175,203 @@ void WorkerManager::save()
 			<< this->m_WorkerArray[i]->m_DeptId << endl;
 	}
 	ofs.close();
+	cout << "职工信息已录入文件！" <<endl;
+}
+
+int WorkerManager::get_WorkerNum()
+{
+	ifstream ifs;
+	ifs.open(FILENAME, ios::in);
+
+	int id;
+	string name;
+	int dId;
+
+	int num = 0;
+	while (ifs >> id && ifs >> name && ifs >> dId)
+	{
+        //记录人数
+		num++;
+	}
+	ifs.close();
+
+	return num;
+}
+
+void WorkerManager::init_Worker()
+{
+	ifstream ifs;
+	ifs.open(FILENAME, ios::in);
+
+	int id;
+	string name;
+	int dId;
+	
+	int index = 0;
+	while (ifs >> id && ifs >> name && ifs >> dId)
+	{
+		Worker * worker = NULL;
+		//根据不同的部门Id创建不同对象
+		if (dId == 1)  // 1普通员工
+		{
+			worker = new Employee(id, name, dId);
+		}
+		else if (dId == 2) //2经理
+		{
+			worker = new Manager(id, name, dId);
+		}
+		else //总裁
+		{
+			worker = new Boss(id, name, dId);
+		}
+		//存放在数组中
+		this->m_WorkerArray[index] = worker;
+		index++;
+	}
+
+	ifs.close();
+}
+
+//显示职工
+void WorkerManager::Show_Worker()
+{
+	if (this->m_FileIsEmpty)
+	{
+		cout << "文件不存在或记录为空！" << endl;
+	}
+	else
+	{
+		for (int i = 0; i < m_WorkerNum; i++)
+		{
+			//利用多态调用接口
+			this->m_WorkerArray[i]->showInfo();
+		}
+	}
+
+	system("pause");
+	system("cls");
+}
+
+int WorkerManager::IsExist(int id)
+{
+	int index = -1;
+	for (int i = 0; i < this->m_WorkerNum; i++)
+	{
+		if (this->m_WorkerArray[i]->m_Id == id)
+		{
+			index = i;
+			break;
+		}
+	}
+	return index;
+}
+
+//删除职工
+void WorkerManager::Del_Worker()
+{
+	if (this->m_FileIsEmpty)
+	{
+		cout << "文件不存在或记录为空！" << endl;
+	}
+	else
+	{
+		//按职工编号删除
+		cout << "请输入想要删除的职工号：" << endl;
+		int id = 0;
+		cin >> id;
+
+		int index = this->IsExist(id);
+
+		if (index != -1)  //说明index上位置数据需要删除
+		{
+			Worker * DelWorker = m_WorkerArray[index];
+			delete DelWorker;
+			for (int i = index; i < this->m_WorkerNum - 1; i++)
+			{
+				this->m_WorkerArray[i] = this->m_WorkerArray[i + 1];
+			}
+			this->m_WorkerNum--;
+
+			this->save(); //删除后数据同步到文件中
+			cout << "删除成功！" << endl;
+		}
+		else
+		{
+			cout << "删除失败，未找到该职工" << endl;
+		}
+	}
+	
+	system("pause");
+	system("cls");
+}
+
+//修改职工
+void WorkerManager::Mod_Worker()
+{
+	if (this->m_FileIsEmpty)
+	{
+		cout << "文件不存在或记录为空！" << endl;
+	}
+	else
+	{
+		cout << "请输入修改职工的编号：" << endl;
+		int id;
+		cin >> id;
+
+		int ret = this->IsExist(id);
+		if (ret != -1)
+		{ 
+			//查找到编号的职工
+			delete this->m_WorkerArray[ret];
+			
+			int newId = 0;
+			string newName = "";
+			int dSelect = 0;
+
+			cout << "查到： " << id << "号职工，请输入新职工号： " << endl;
+			cin >> newId;
+
+			cout << "请输入新姓名： " << endl;
+			cin >> newName;
+
+			cout << "请输入岗位： " << endl;
+			cout << "1、普通职工" << endl;
+			cout << "2、经理" << endl;
+			cout << "3、老板" << endl;
+			cin >> dSelect;
+
+			Worker * worker = NULL;
+			switch (dSelect)
+			{
+			case1:
+				worker = new Employee(newId, newName, dSelect);
+				break;
+			case2:
+				worker = new Manager(newId, newName, dSelect);
+				break;
+			case 3:
+				worker = new Boss(newId, newName, dSelect);
+				break;
+			default:
+				break;
+			}
+
+			//更改数据 到数组中
+			this->m_WorkerArray[ret]= worker;
+			cout << "修改成功！" << endl;
+
+			//保存到文件中
+			this->save();
+		}
+		else
+		{
+			cout << "修改失败，查无此人" << endl;
+		}
+	}
+
+	//按任意键 清屏
+	system("pause");
+	system("cls");
 }
 
 
