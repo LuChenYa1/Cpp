@@ -8,7 +8,7 @@
         "zig": "zig run",
         //"cpp"项可用于增加编译文件
         // "cpp": "cd $dir && g++ $fileName -IWorkerManager WorkerManager/workerManager.cpp -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-        "cpp": "cd $dir && g++ $fileName Multi_Func/Circle.cpp Multi_Func/Point.cpp -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "cpp": "cd $dir && g++ $fileName Worker.h Employee.cpp Manager.cpp Boss.cpp workerManager.cpp -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
         "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
         "php": "php",
         "python": "python -u",

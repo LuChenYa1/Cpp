@@ -22,7 +22,7 @@
 					[
 						0
 					],
-					"name" : "Pro_MyMulti_99",
+					"name" : "Pro_WorkerManager",
 					"targetIndexes" : 
 					[
 						0
@@ -33,9 +33,9 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "Multi::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Multi-Debug-02e47a704c1816a36716.json",
-					"name" : "Multi",
+					"id" : "DeBug::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-DeBug-Debug-c153dadda12fc2ed44ed.json",
+					"name" : "DeBug",
 					"projectIndex" : 0
 				}
 			]
@@ -44,8 +44,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "D:/A_Project/C++/Code/C++_study/build",
-		"source" : "D:/A_Project/C++/Code/C++_study"
+		"build" : "D:/A_Project/C++/Code/C++_Project_WokerManagerSystem/build",
+		"source" : "D:/A_Project/C++/Code/C++_Project_WokerManagerSystem"
 	},
 	"version" : 
 	{

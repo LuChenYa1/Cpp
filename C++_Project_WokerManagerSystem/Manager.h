@@ -1,7 +1,8 @@
 #pragma once
 #include<iostream>
-using namespace std;
 #include "worker.h"
+
+using namespace std;
 
 //经理类
 class Manager :public Worker
@@ -14,5 +15,5 @@ public:
 	virtual void showInfo();
 
 	//获取职工岗位名称
-	virtual string getDeptName();
+	string getDeptName();//! 这里不能加virtual,报了很多错
 };

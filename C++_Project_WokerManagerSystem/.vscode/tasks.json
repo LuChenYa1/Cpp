@@ -11,9 +11,13 @@
                 "-g",
                 "${file}",
                 //"同级文件名.cpp",猜测同级文件可以直接写在这里
-                "-IMulti_Func",//子级文件需要加这个
-                "Multi_Func/Circle.cpp",
-                "Multi_Func/Point.cpp",
+                "workerManager.cpp",
+                "Boss.cpp",
+                "Employee.cpp",
+                "Manager.cpp",
+                "Worker.h",
+                // "-IMulti_Func",//子级文件需要加这个
+                // "Multi_Func/Func.cpp",
                 "-o",
                 //指定输出的可执行文件名字
                 "${fileDirname}\\${fileBasenameNoExtension}.exe"

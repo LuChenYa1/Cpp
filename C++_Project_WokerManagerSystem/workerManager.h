@@ -47,6 +47,15 @@ public:
 	//* 修改职工
 	void Mod_Worker();
 
+	//* 查找职工
+	void Find_Worker();
+
+	//* 排序职工
+	void Sort_Worker();
+
+	//* 清空文件
+	void Clean_File();
+
 	//* 析构函数
 	~WorkerManager();
 

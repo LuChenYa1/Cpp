@@ -36,10 +36,13 @@ int main()
 			wm.Mod_Worker();
 			break;
 		case 5: //查找职工
+			wm.Find_Worker();
 			break;
 		case 6: //排序职工
+			wm.Sort_Worker();
 			break;
 		case 7: //清空文件
+			wm.Clean_File();
 			break;
 		default:
 			system("cls");
@@ -47,7 +50,7 @@ int main()
 		}
 	}
 
+	// wm.Mod_Worker();
 
 	return 0;
 }
-

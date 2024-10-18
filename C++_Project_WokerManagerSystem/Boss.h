@@ -14,5 +14,5 @@ public:
 	virtual void showInfo();
 
 	//获取职工岗位名称
-	virtual string getDeptName();
+	string getDeptName();//! 这里不能加virtual,报了很多错
 };
