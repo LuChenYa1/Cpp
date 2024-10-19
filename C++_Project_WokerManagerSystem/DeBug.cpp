@@ -28,6 +28,7 @@ int main()
 			break;
 		case 2: //显示职工
 			wm.Show_Worker();
+			 
 			break;
 		case 3: //删除职工
 			wm.Del_Worker();

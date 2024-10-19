@@ -1,7 +1,7 @@
 project(Pro_MyMulti_99) # 起一个项目名称
 
 add_executable(
-    Multi
+    DeBug
     DeBug.cpp
     Multi_Func/Circle.cpp
     Multi_Func/Point.cpp

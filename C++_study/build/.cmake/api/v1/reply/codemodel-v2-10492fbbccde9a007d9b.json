@@ -33,9 +33,9 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "Multi::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Multi-Debug-6668928974b232926c4e.json",
-					"name" : "Multi",
+					"id" : "DeBug::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-DeBug-Debug-d1af3d68412bcf8a7bb6.json",
+					"name" : "DeBug",
 					"projectIndex" : 0
 				}
 			]

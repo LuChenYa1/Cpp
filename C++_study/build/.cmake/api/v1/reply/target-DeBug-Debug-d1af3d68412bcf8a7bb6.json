@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "Multi.exe"
+			"path" : "DeBug.exe"
 		},
 		{
-			"path" : "Multi.pdb"
+			"path" : "DeBug.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -50,7 +50,7 @@
 			]
 		}
 	],
-	"id" : "Multi::@6890427a1f51a3e7e1df",
+	"id" : "DeBug::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -70,8 +70,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "Multi",
-	"nameOnDisk" : "Multi.exe",
+	"name" : "DeBug",
+	"nameOnDisk" : "DeBug.exe",
 	"paths" : 
 	{
 		"build" : ".",
