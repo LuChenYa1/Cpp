@@ -4,16 +4,16 @@
 
 using namespace std;
 
-//¾­ÀíÀà
+//ç»ç†ç±»
 class Manager :public Worker
 {
 public:
 
 	Manager(int id, string name, int dId);
 
-	//ÏÔÊ¾¸öÈËĞÅÏ¢
+	//æ˜¾ç¤ºä¸ªäººä¿¡æ¯
 	virtual void showInfo();
 
-	//»ñÈ¡Ö°¹¤¸ÚÎ»Ãû³Æ
-	string getDeptName();//! ÕâÀï²»ÄÜ¼Óvirtual,±¨ÁËºÜ¶à´í
+	//è·å–èŒå·¥å²—ä½åç§°
+	string getDeptName();//! è¿™é‡Œä¸èƒ½åŠ virtual,æŠ¥äº†å¾ˆå¤šé”™
 };

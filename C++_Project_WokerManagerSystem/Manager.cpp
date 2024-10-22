@@ -9,13 +9,13 @@ Manager::Manager(int id, string name, int dId)
 
 void Manager::showInfo()
 {
-	cout << "Ö°¹¤±àºÅ£º " << this->m_Id
-		<< " \tÖ°¹¤ÐÕÃû£º " << this->m_Name
-		<< " \t¸ÚÎ»£º" << this->getDeptName()
-		<< " \t¸ÚÎ»Ö°Ôð£ºÍê³ÉÀÏ°å½»¸øµÄÈÎÎñ,²¢ÏÂ·¢ÈÎÎñ¸øÔ±¹¤" << endl;
+	cout << "èŒå·¥ç¼–å·ï¼š " << this->m_Id
+		<< " \tèŒå·¥å§“åï¼š " << this->m_Name
+		<< " \tå²—ä½ï¼š" << this->getDeptName()
+		<< " \tå²—ä½èŒè´£ï¼šå®Œæˆè€æ¿äº¤ç»™çš„ä»»åŠ¡,å¹¶ä¸‹å‘ä»»åŠ¡ç»™å‘˜å·¥" << endl;
 }
 
 string Manager::getDeptName()
 {
-	return string("¾­Àí");
+	return string("ç»ç†");
 }

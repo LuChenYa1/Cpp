@@ -1,4 +1,4 @@
-project(Pro_WorkerManager) # ÆğÒ»¸öÏîÄ¿Ãû³Æ
+project(Pro_WorkerManager) # èµ·ä¸€ä¸ªé¡¹ç›®åç§°
 
 add_executable(
     DeBug
@@ -8,4 +8,4 @@ add_executable(
     Manager.cpp
     workerManager.cpp
     Worker.h
-) # ¿ÉÖ´ĞĞÎÄ¼şÃû×Ö£¨Î»ÓÚbuildÎÄ¼ş¼ĞÏÂ£© Òª±àÒëµÄÎÄ¼ş£¨¿É¶à¸ö£©
+) # å¯æ‰§è¡Œæ–‡ä»¶åå­—ï¼ˆä½äºbuildæ–‡ä»¶å¤¹ä¸‹ï¼‰ è¦ç¼–è¯‘çš„æ–‡ä»¶ï¼ˆå¯å¤šä¸ªï¼‰

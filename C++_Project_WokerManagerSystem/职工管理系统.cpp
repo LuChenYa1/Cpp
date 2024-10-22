@@ -13,35 +13,35 @@ int main()
 	int choice = 0;
 	while (1)
 	{
-		//Õ¹Ê¾²Ëµ¥
+		//å±•ç¤ºèœå•
 		wm.Show_Menu();
-		cout << "ÇëÊäÈëÄúµÄÑ¡Ôñ:" << endl;
+		cout << "è¯·è¾“å…¥æ‚¨çš„é€‰æ‹©:" << endl;
 		cin >> choice;
 
 		switch (choice)
 		{
-		case 0: //ÍË³öÏµÍ³
+		case 0: //é€€å‡ºç³»ç»Ÿ
 			wm.exitSystem();
 			break;
-		case 1: //Ìí¼ÓÖ°¹¤
+		case 1: //æ·»åŠ èŒå·¥
 			wm.Add_Emp();
 			break;
-		case 2: //ÏÔÊ¾Ö°¹¤
+		case 2: //æ˜¾ç¤ºèŒå·¥
 			wm.Show_Worker();
 			break;
-		case 3: //É¾³ıÖ°¹¤
+		case 3: //åˆ é™¤èŒå·¥
 			wm.Del_Worker();
 			break;
-		case 4: //ĞŞ¸ÄÖ°¹¤
+		case 4: //ä¿®æ”¹èŒå·¥
 			wm.Mod_Worker();
 			break;
-		case 5: //²éÕÒÖ°¹¤
+		case 5: //æŸ¥æ‰¾èŒå·¥
 			wm.Find_Worker();
 			break;
-		case 6: //ÅÅĞòÖ°¹¤
+		case 6: //æ’åºèŒå·¥
 			wm.Sort_Worker();
 			break;
-		case 7: //Çå¿ÕÎÄ¼ş
+		case 7: //æ¸…ç©ºæ–‡ä»¶
 			wm.Clean_File();
 			break;
 		default:

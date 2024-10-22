@@ -1,4 +1,4 @@
-// #pragma once  //Õâ¸öÎÄ¼ş²»ÄÜÓÃÕâ¸ö×÷°üº¬ÊØÎÀ
+// #pragma once  //è¿™ä¸ªæ–‡ä»¶ä¸èƒ½ç”¨è¿™ä¸ªä½œåŒ…å«å®ˆå«
 #ifndef WORKER_H
 #define WORKER_H
 
@@ -6,19 +6,19 @@
 #include<string>
 using namespace std;
 
-//* Ö°¹¤³éÏó»ùÀà
+//* èŒå·¥æŠ½è±¡åŸºç±»
 class Worker
 {
 public:
 
-	//* ÏÔÊ¾¸öÈËĞÅÏ¢
+	//* æ˜¾ç¤ºä¸ªäººä¿¡æ¯
 	virtual void showInfo() = 0;
-	//* »ñÈ¡¸ÚÎ»Ãû³Æ
+	//* è·å–å²—ä½åç§°
 	virtual string getDeptName() = 0;
 
-	int m_Id; //* Ö°¹¤±àºÅ
-	string m_Name; //* Ö°¹¤ĞÕÃû
-	int m_DeptId; //* Ö°¹¤ËùÔÚ²¿ÃÅÃû³Æ±àºÅ
+	int m_Id; //* èŒå·¥ç¼–å·
+	string m_Name; //* èŒå·¥å§“å
+	int m_DeptId; //* èŒå·¥æ‰€åœ¨éƒ¨é—¨åç§°ç¼–å·
 };
 
 #endif // WORKER_H

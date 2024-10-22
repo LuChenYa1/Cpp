@@ -10,13 +10,13 @@ Boss::Boss(int id, string name, int dId)
 
 void Boss::showInfo()
 {
-	cout << "Ö°¹¤±àºÅ£º " << this->m_Id
-		<< " \tÖ°¹¤ÐÕÃû£º " << this->m_Name
-		<< " \t¸ÚÎ»£º" << this->getDeptName()
-		<< " \t¸ÚÎ»Ö°Ôð£º¹ÜÀí¹«Ë¾ËùÓÐÊÂÎñ" << endl;
+	cout << "èŒå·¥ç¼–å·ï¼š " << this->m_Id
+		<< " \tèŒå·¥å§“åï¼š " << this->m_Name
+		<< " \tå²—ä½ï¼š" << this->getDeptName()
+		<< " \tå²—ä½èŒè´£ï¼šç®¡ç†å…¬å¸æ‰€æœ‰äº‹åŠ¡" << endl;
 }
 
 string Boss::getDeptName()
 {
-	return string("×Ü²Ã");
+	return string("æ€»è£");
 }

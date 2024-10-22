@@ -3,17 +3,17 @@
 using namespace std;
 #include "worker.h"
 
-//Ô±¹¤Àà
+//å‘˜å·¥ç±»
 class Employee :public Worker
 {
 public:
 
-	//¹¹Ôìº¯Êı
+	//æ„é€ å‡½æ•°
 	Employee(int id, string name, int dId);
 
-	//ÏÔÊ¾¸öÈËĞÅÏ¢
+	//æ˜¾ç¤ºä¸ªäººä¿¡æ¯
 	virtual void showInfo();
 
-	//»ñÈ¡Ö°¹¤¸ÚÎ»Ãû³Æ
-	string getDeptName();//! ÕâÀï²»ÄÜ¼Óvirtual,±¨ÁËºÜ¶à´í
+	//è·å–èŒå·¥å²—ä½åç§°
+	string getDeptName();//! è¿™é‡Œä¸èƒ½åŠ virtual,æŠ¥äº†å¾ˆå¤šé”™
 };

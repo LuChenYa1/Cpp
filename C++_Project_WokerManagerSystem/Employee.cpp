@@ -9,13 +9,13 @@ Employee::Employee(int id, string name, int dId)
 
 void Employee::showInfo()
 {
-	cout << "Ö°¹¤±àºÅ£º " << this->m_Id
-		<< " \tÖ°¹¤ÐÕÃû£º " << this->m_Name
-		<< " \t¸ÚÎ»£º" << this->getDeptName()
-		<< " \t¸ÚÎ»Ö°Ôð£ºÍê³É¾­Àí½»¸øµÄÈÎÎñ" << endl;
+	cout << "èŒå·¥ç¼–å·ï¼š " << this->m_Id
+		<< " \tèŒå·¥å§“åï¼š " << this->m_Name
+		<< " \tå²—ä½ï¼š" << this->getDeptName()
+		<< " \tå²—ä½èŒè´£ï¼šå®Œæˆç»ç†äº¤ç»™çš„ä»»åŠ¡" << endl;
 }
 
 string Employee::getDeptName()
 {
-	return string("Ô±¹¤");
+	return string("å‘˜å·¥");
 }
