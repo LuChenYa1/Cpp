@@ -7,6 +7,10 @@
 				{
 					"build" : ".",
 					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.17"
+					},
 					"projectIndex" : 0,
 					"source" : ".",
 					"targetIndexes" : 
@@ -35,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "DeBug::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-DeBug-Debug-8e08ea6917de11b5a209.json",
+					"jsonFile" : "target-DeBug-Debug-f9874d64b286e24fbd56.json",
 					"name" : "DeBug",
 					"projectIndex" : 0
 				}
