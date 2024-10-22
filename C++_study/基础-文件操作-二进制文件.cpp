@@ -13,42 +13,42 @@ public:
 
 char Array[11] = "HelloWorld";
 
-//* ¶ş½øÖÆÎÄ¼ş  Ğ´ÎÄ¼ş
+//* äºŒè¿›åˆ¶æ–‡ä»¶  å†™æ–‡ä»¶
 void test01()
 {
-	//1¡¢°üº¬Í·ÎÄ¼ş
+	//1ã€åŒ…å«å¤´æ–‡ä»¶
 
-	//2¡¢´´½¨Êä³öÁ÷¶ÔÏó
+	//2ã€åˆ›å»ºè¾“å‡ºæµå¯¹è±¡
 	ofstream ofs("person.txt", ios::out | ios::binary);
 	
-	//3¡¢´ò¿ªÎÄ¼ş
+	//3ã€æ‰“å¼€æ–‡ä»¶
 	//ofs.open("person.txt", ios::out | ios::binary);
 
-	Person p = {"ÕÅÈı"  , 18};
+	Person p = {"å¼ ä¸‰"  , 18};
 
-	//4¡¢Ğ´ÎÄ¼ş
-    //* Ö¸¶¨Ğ´ÈëÊı¾İÀàĞÍºÍ×Ö½ÚÊı
+	//4ã€å†™æ–‡ä»¶
+    //* æŒ‡å®šå†™å…¥æ•°æ®ç±»å‹å’Œå­—èŠ‚æ•°
 	ofs.write((const char *)&p, sizeof(p));
     ofs.write(Array, 10);
 
-	//5¡¢¹Ø±ÕÎÄ¼ş
+	//5ã€å…³é—­æ–‡ä»¶
 	ofs.close();
 }
 
-//* ¶ÁÎÄ¼ş
+//* è¯»æ–‡ä»¶
 void test02()
 {
 	ifstream ifs("person.txt", ios::in | ios::binary);
 	if (!ifs.is_open())
 	{
-		cout << "ÎÄ¼ş´ò¿ªÊ§°Ü" << endl;
+		cout << "æ–‡ä»¶æ‰“å¼€å¤±è´¥" << endl;
 	}
 
 	Person p1;
-    //* Ö¸¶¨¶ÁÈ¡×Ö½ÚÊıºÍÊı¾İ´æ·ÅÎ»ÖÃ
+    //* æŒ‡å®šè¯»å–å­—èŠ‚æ•°å’Œæ•°æ®å­˜æ”¾ä½ç½®
 	ifs.read((char *)&p1, sizeof(p1));
 
-	cout << "ĞÕÃû£º " << p1.m_Name << " ÄêÁä£º " << p1.m_Age << endl;
+	cout << "å§“åï¼š " << p1.m_Name << " å¹´é¾„ï¼š " << p1.m_Age << endl;
 }
 
 int main() 

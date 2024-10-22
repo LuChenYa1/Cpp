@@ -3,17 +3,17 @@
 using namespace std;
 
 void Swap(int &a, int &b);
-// int & ReDef(void);//! ²»Òª·µ»Ø¾Ö²¿±äÁ¿µÄÒýÓÃ
+// int & ReDef(void);//! ä¸è¦è¿”å›žå±€éƒ¨å˜é‡çš„å¼•ç”¨
 int & Left(void);
 
-//! ÒýÓÃµÄ±¾ÖÊÊÇÖ¸Õë³£Á¿£¬ÐÂÃû×Ö±íÃæÓÃ·¨ÊÇ±äÁ¿£¬Êµ¼ÊÄÚ²¿ÊÇÖ¸Õë²Ù×÷
-//* ÒýÓÃÊÇ¸øÒÑ¾­´æÔÚµÄ±äÁ¿¿Õ¼äÔÙÈ¡¸öÃû×Ö£¬²»»á´´½¨ÐÂµÄ¿Õ¼ä
+//! å¼•ç”¨çš„æœ¬è´¨æ˜¯æŒ‡é’ˆå¸¸é‡ï¼Œæ–°åå­—è¡¨é¢ç”¨æ³•æ˜¯å˜é‡ï¼Œå®žé™…å†…éƒ¨æ˜¯æŒ‡é’ˆæ“ä½œ
+//* å¼•ç”¨æ˜¯ç»™å·²ç»å­˜åœ¨çš„å˜é‡ç©ºé—´å†å–ä¸ªåå­—ï¼Œä¸ä¼šåˆ›å»ºæ–°çš„ç©ºé—´
 
 int main(void)
 {
     int a = 10;
-    int &b = a;//* ¸ø±äÁ¿Æð±ðÃû
-    b = 22;//ÄÚ²¿·¢ÏÖbÊÇÒýÓÃ£¬×Ô¶¯×ª»»Îª *b = 22;
+    int &b = a;//* ç»™å˜é‡èµ·åˆ«å
+    b = 22;//å†…éƒ¨å‘çŽ°bæ˜¯å¼•ç”¨ï¼Œè‡ªåŠ¨è½¬æ¢ä¸º *b = 22;
     cout << "a = " << a << endl;
     cout << "b = " << b << endl;
 
@@ -22,30 +22,30 @@ int main(void)
     cout << "a = " << a << endl;
     cout << "b = " << b << endl;
 
-    //! ×¢ÒâÊÂÏî
-    //* int &c;  ÒýÓÃ±ØÐë³õÊ¼»¯
-    //* ÒýÓÃ³õÊ¼»¯ºó£¬²»¿ÉÔÙ¸Ä±ä,Ò²Ã»ÓÐ·½·¨¿ÉÒÔ¸ü¸Ä
+    //! æ³¨æ„äº‹é¡¹
+    //* int &c;  å¼•ç”¨å¿…é¡»åˆå§‹åŒ–
+    //* å¼•ç”¨åˆå§‹åŒ–åŽï¼Œä¸å¯å†æ”¹å˜,ä¹Ÿæ²¡æœ‰æ–¹æ³•å¯ä»¥æ›´æ”¹
     int d = 20;
-    b = d;//ÕâÊÇ¸³Öµ²Ù×÷£¬²»ÊÇ¸ü¸ÄÒýÓÃ
-    //&b = d;//&b ÊÇ±äÁ¿µØÖ·£¬ÊÇ³£Á¿£¬ÎÞ·¨ÊµÏÖÒýÓÃ¸ü¸Ä
+    b = d;//è¿™æ˜¯èµ‹å€¼æ“ä½œï¼Œä¸æ˜¯æ›´æ”¹å¼•ç”¨
+    //&b = d;//&b æ˜¯å˜é‡åœ°å€ï¼Œæ˜¯å¸¸é‡ï¼Œæ— æ³•å®žçŽ°å¼•ç”¨æ›´æ”¹
 
-    //! ÒýÓÃµÄÓ¦ÓÃ£¬×÷ÎªÐÎ²Î£¬ÊµÏÖÖ·´«µÝ
+    //! å¼•ç”¨çš„åº”ç”¨ï¼Œä½œä¸ºå½¢å‚ï¼Œå®žçŽ°å€ä¼ é€’
     int i = 10, j = 20;
     Swap(i, j);
     cout << "i = " << i << endl;
     cout << "j = " << j << endl;
 
-    // int &e = ReDef();//²»ºÏ·¨£¬¸ø¿Õ¼äÒÑ¾­±»ÊÍ·ÅµÄ¾Ö²¿±äÁ¿ÖØÃüÃû£¬Ê¹ÓÃÊ±Ö¸Ïò·Ç·¨¿Õ¼ä
+    // int &e = ReDef();//ä¸åˆæ³•ï¼Œç»™ç©ºé—´å·²ç»è¢«é‡Šæ”¾çš„å±€éƒ¨å˜é‡é‡å‘½åï¼Œä½¿ç”¨æ—¶æŒ‡å‘éžæ³•ç©ºé—´
     // cout << "e = " << e << endl;
 
-    //! ÒýÓÃ×÷Îª·µ»ØÖµÊ±£¬·µ»ØµÄÊÇ±äÁ¿±¾Éí¶ø²»ÊÇ±äÁ¿µÄÖµ
-    int &e = Left();//¸ø¾²Ì¬±äÁ¿¿Õ¼äÆð¸öÖ÷º¯ÊýÈÏÊ¶µÄÃû×Ö
-    Left() = 1111;//ÒýÓÃ×÷Îª×óÖµ
+    //! å¼•ç”¨ä½œä¸ºè¿”å›žå€¼æ—¶ï¼Œè¿”å›žçš„æ˜¯å˜é‡æœ¬èº«è€Œä¸æ˜¯å˜é‡çš„å€¼
+    int &e = Left();//ç»™é™æ€å˜é‡ç©ºé—´èµ·ä¸ªä¸»å‡½æ•°è®¤è¯†çš„åå­—
+    Left() = 1111;//å¼•ç”¨ä½œä¸ºå·¦å€¼
     cout << "e = " << e << endl;
 
-    //! ÒýÓÃÐèÒªÒ»¸öºÏ·¨µÄÄÚ´æ¿Õ¼ä
+    //! å¼•ç”¨éœ€è¦ä¸€ä¸ªåˆæ³•çš„å†…å­˜ç©ºé—´
     //int &name = 10;
-    //! ½â¾ö·½°¸£º¼Óconst, ÓÅµãÊÇÄÜ¸ø³£Á¿ÖØÃüÃû£¬È±µãÊÇ²»¿ÉÐÞ¸Ä
+    //! è§£å†³æ–¹æ¡ˆï¼šåŠ const, ä¼˜ç‚¹æ˜¯èƒ½ç»™å¸¸é‡é‡å‘½åï¼Œç¼ºç‚¹æ˜¯ä¸å¯ä¿®æ”¹
     const int & name = 10;//int temp = 10; const int & name = temp;
     //name = 20;
     cout << "name = " << name << endl;
@@ -53,7 +53,7 @@ int main(void)
     return 0;
 }
 
-//ÒýÓÃ×öº¯Êý²ÎÊý
+//å¼•ç”¨åšå‡½æ•°å‚æ•°
 void Swap(int &a, int &b)
 {
     int temp;
@@ -62,16 +62,16 @@ void Swap(int &a, int &b)
     b = temp;
 }
 
-//×öÓÒÖµ
-// int & ReDef(void)//! ²»Òª·µ»Ø¾Ö²¿±äÁ¿£¨³ýÁË¾²Ì¬±äÁ¿£©µÄÒýÓÃ,»á±¨´í
+//åšå³å€¼
+// int & ReDef(void)//! ä¸è¦è¿”å›žå±€éƒ¨å˜é‡ï¼ˆé™¤äº†é™æ€å˜é‡ï¼‰çš„å¼•ç”¨,ä¼šæŠ¥é”™
 // {
 //     int a = 10;
 //     return a;
 // }
 
-//×ö×óÖµ
+//åšå·¦å€¼
 int & Left(void)
 {
-    static int v = 11;//¾²Ì¬±äÁ¿£¬ÔÚÈ«¾ÖÇø
+    static int v = 11;//é™æ€å˜é‡ï¼Œåœ¨å…¨å±€åŒº
     return v;
 }

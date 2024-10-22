@@ -10,11 +10,11 @@ void isInCircle(Circle C, Point P)
                     (P.ReadY() - C.ReadCenter().ReadY()) * (P.ReadY() - C.ReadCenter().ReadY());
     int R_2 = C.ReadR() * C.ReadR();
     if(Distance_2 == R_2)
-        cout << "点在圆上" << endl;
+        cout << "鐐瑰湪鍦嗕笂" << endl;
     else if(Distance_2 > R_2)
-        cout << "点在圆外" << endl;
+        cout << "鐐瑰湪鍦嗗" << endl;
     else
-        cout << "点在圆内" << endl;
+        cout << "鐐瑰湪鍦嗗唴" << endl;
 }
 
 int main(void)

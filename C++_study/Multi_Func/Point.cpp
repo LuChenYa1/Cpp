@@ -1,6 +1,6 @@
 #include "Point.h"
 
-void Point::SetX(int S_X)//! 函数是成员函数，不是全局函数
+void Point::SetX(int S_X)//! 鍑芥暟鏄垚鍛樺嚱鏁帮紝涓嶆槸鍏ㄥ眬鍑芥暟
 {
     X = S_X;
 }

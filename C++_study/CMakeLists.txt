@@ -1,9 +1,9 @@
 cmake_minimum_required(VERSION 3.17)
-project(Pro_MyMulti_99) # ÆğÒ»¸öÏîÄ¿Ãû³Æ
+project(Pro_MyMulti_99) # èµ·ä¸€ä¸ªé¡¹ç›®åç§°
 
 add_executable(
     DeBug
     DeBug.cpp
     Multi_Func/Circle.cpp
     Multi_Func/Point.cpp
-) # ¿ÉÖ´ĞĞÎÄ¼şÃû×Ö£¨Î»ÓÚbuildÎÄ¼ş¼ĞÏÂ£© Òª±àÒëµÄÎÄ¼ş£¨¿É¶à¸ö£©
+) # å¯æ‰§è¡Œæ–‡ä»¶åå­—ï¼ˆä½äºbuildæ–‡ä»¶å¤¹ä¸‹ï¼‰ è¦ç¼–è¯‘çš„æ–‡ä»¶ï¼ˆå¯å¤šä¸ªï¼‰

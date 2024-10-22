@@ -10,18 +10,18 @@ int main(void)
 	cout << sizeof(array) / 4 << endl;
 	cout << &array[0] << endl;
 	cout << &array[1] << endl;
-	cout << sizeof(&array[2]) << endl;//* µçÄÔÏµÍ³Ö¸Õë8×Ö½Ú
+	cout << sizeof(&array[2]) << endl;//* ç”µè„‘ç³»ç»ŸæŒ‡é’ˆ8å­—èŠ‚
 
 	int array2[][3] = {1, 3, 5, 7, 9, 11};
 	cout << array2[1][2] << endl;
 	cout << sizeof(array2) / 4 << endl;
 	cout << &array2[0][2] << endl;
-	cout << array2[1] << endl;//È¥µôÁÐÊýºó£¬±¾Éí¾ÍÊÇµØÖ·
-	cout << sizeof(&array2[1][1]) << endl;//µçÄÔÏµÍ³Ö¸Õë8×Ö½Ú
+	cout << array2[1] << endl;//åŽ»æŽ‰åˆ—æ•°åŽï¼Œæœ¬èº«å°±æ˜¯åœ°å€
+	cout << sizeof(&array2[1][1]) << endl;//ç”µè„‘ç³»ç»ŸæŒ‡é’ˆ8å­—èŠ‚
 
-	//Ã°ÅÝÅÅÐò
+	//å†’æ³¡æŽ’åº
 	int b[10] = {23, 98, 45, 55, 39, 66, 38, 11, 78, 60};
-	for (int i = 0; i < 10; i++)//b[i]Ê¼ÖÕ´ú±í´Ób[0]µ½b[i]×îÐ¡µÄÊý
+	for (int i = 0; i < 10; i++)//b[i]å§‹ç»ˆä»£è¡¨ä»Žb[0]åˆ°b[i]æœ€å°çš„æ•°
 	{
 		for (int j = i; j < 10; j++)
 		{

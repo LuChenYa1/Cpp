@@ -14,7 +14,7 @@ public:
         this->Age = Age;
     }
 
-    //* == ÏàµÈ¹ØÏµÔËËã·ûÖØÔØ
+    //* == ç›¸ç­‰å…³ç³»è¿ç®—ç¬¦é‡è½½
     bool operator== (Person & p)
     {
         if(this->Name == p.Name && this->Age == p.Age)
@@ -22,7 +22,7 @@ public:
         else
             return false;
     }
-    //* £¡= ²»µÈ¹ØÏµÔËËã·ûÖØÔØ
+    //* ï¼= ä¸ç­‰å…³ç³»è¿ç®—ç¬¦é‡è½½
     bool operator!= (Person & p)
     {
         if(this->Name != p.Name || this->Age != p.Age)
@@ -34,19 +34,19 @@ public:
 
 int main()
 {
-    Person p1("ÕÅÈı", 20);
-    Person p2("ÀîËÄ", 18);
-    Person p3("ÕÅÈı", 20);
+    Person p1("å¼ ä¸‰", 20);
+    Person p2("æå››", 18);
+    Person p3("å¼ ä¸‰", 20);
 
     if(p1 == p2)
-        cout << "Á©¶ÔÏóÊÇÒ»ÑùµÄ" << endl;
+        cout << "ä¿©å¯¹è±¡æ˜¯ä¸€æ ·çš„" << endl;
     else
-        cout << "Á©¶ÔÏóÓĞÇø±ğ" << endl;
+        cout << "ä¿©å¯¹è±¡æœ‰åŒºåˆ«" << endl;
 
     if(p1 != p2)
-        cout << "Á©¶ÔÏóÓĞÇø±ğ" << endl;
+        cout << "ä¿©å¯¹è±¡æœ‰åŒºåˆ«" << endl;
     else
-        cout << "Á©¶ÔÏóÊÇÒ»ÑùµÄ" << endl;
+        cout << "ä¿©å¯¹è±¡æ˜¯ä¸€æ ·çš„" << endl;
 
     return 0;
 }

@@ -2,8 +2,8 @@
 
 using namespace std;
 
-//* ÔÚÀà¶ÔÏóA×÷ÎªÀàB³ÉÔ±²¢´´½¨¶ÔÏóbÊ±£¬Ò»°ãÔÚÀàBÖÐÊ¹ÓÃ³õÊ¼»¯ÁÐ±í¸³ÖµÀà¶ÔÏóAºÍÆäËû³ÉÔ±£¬È»ºóÔÙ½øÈë»¨À¨ºÅÖ´ÐÐÊ£ÏÂÄÚÈÝ
-//* ¹Ê£¬¶ÔÏóAÏÈÈëÕ»£¨Ö´ÐÐ¹¹Ôìº¯Êý£©£¬bºóÈëÕ»£¬Õ»¡°ÏÈ½øºó³ö¡±£¬ËùÒÔbÏÈ³öÕ»£¨Ö´ÐÐÎö¹¹º¯Êý£©£¬È»ºóA³öÕ»
+//* åœ¨ç±»å¯¹è±¡Aä½œä¸ºç±»Bæˆå‘˜å¹¶åˆ›å»ºå¯¹è±¡bæ—¶ï¼Œä¸€èˆ¬åœ¨ç±»Bä¸­ä½¿ç”¨åˆå§‹åŒ–åˆ—è¡¨èµ‹å€¼ç±»å¯¹è±¡Aå’Œå…¶ä»–æˆå‘˜ï¼Œç„¶åŽå†è¿›å…¥èŠ±æ‹¬å·æ‰§è¡Œå‰©ä¸‹å†…å®¹
+//* æ•…ï¼Œå¯¹è±¡Aå…ˆå…¥æ ˆï¼ˆæ‰§è¡Œæž„é€ å‡½æ•°ï¼‰ï¼ŒbåŽå…¥æ ˆï¼Œæ ˆâ€œå…ˆè¿›åŽå‡ºâ€ï¼Œæ‰€ä»¥bå…ˆå‡ºæ ˆï¼ˆæ‰§è¡Œæžæž„å‡½æ•°ï¼‰ï¼Œç„¶åŽAå‡ºæ ˆ
 
 class Phone
 {
@@ -12,16 +12,16 @@ public:
 
     Phone()
     {
-        cout << "ÕâÊÇPhoneÄ¬ÈÏÎÞ²Î¹¹Ôìº¯Êý" << endl;
+        cout << "è¿™æ˜¯Phoneé»˜è®¤æ— å‚æž„é€ å‡½æ•°" << endl;
     }
     Phone(string Str):Name_Phone(Str)
     {
-        cout << "ÕâÊÇPhoneÓÐ²Î¹¹Ôìº¯Êý" << endl;
+        cout << "è¿™æ˜¯Phoneæœ‰å‚æž„é€ å‡½æ•°" << endl;
     }
 
     ~Phone()
     {
-        cout << "ÕâÊÇPhoneÎö¹¹º¯Êý" << endl;
+        cout << "è¿™æ˜¯Phoneæžæž„å‡½æ•°" << endl;
     }
 };
 
@@ -39,22 +39,22 @@ public:
 
     Person(int a, int b, int c, string Str):A(a),B(b), C(c), ph(Str)
     {
-        cout << "ÕâÊÇPersonÓÐ²Î¹¹Ôìº¯Êý" << endl;
+        cout << "è¿™æ˜¯Personæœ‰å‚æž„é€ å‡½æ•°" << endl;
         // ph = Str;
-        //! µ±Àà¶ÔÏóA×÷ÎªÀàB³ÉÔ±Ê±£¬BµÄ¹¹Ôìº¯ÊýÖÐÓ¦µ±¾¡¿ÉÄÜÊ¹ÓÃ³õÊ¼»¯ÁÐ±í¶ÔA½øÐÐ¸³Öµ£¬²»ÒªÔÚ»¨À¨ºÅÄÚ¸³Öµ
-        //* Ô­Òò£ºÔÚ»¨À¨ºÅÄÚ¸³Öµ¶ÔÏóAÊ±£¬·¢ÏÖAµ÷ÓÃÁËÁ½´Î¹¹ÔìºÍÎö¹¹º¯Êý£¬ÇÒµ÷ÓÃË³Ðò»ìÂÒ²»Çå
+        //! å½“ç±»å¯¹è±¡Aä½œä¸ºç±»Bæˆå‘˜æ—¶ï¼ŒBçš„æž„é€ å‡½æ•°ä¸­åº”å½“å°½å¯èƒ½ä½¿ç”¨åˆå§‹åŒ–åˆ—è¡¨å¯¹Aè¿›è¡Œèµ‹å€¼ï¼Œä¸è¦åœ¨èŠ±æ‹¬å·å†…èµ‹å€¼
+        //* åŽŸå› ï¼šåœ¨èŠ±æ‹¬å·å†…èµ‹å€¼å¯¹è±¡Aæ—¶ï¼Œå‘çŽ°Aè°ƒç”¨äº†ä¸¤æ¬¡æž„é€ å’Œæžæž„å‡½æ•°ï¼Œä¸”è°ƒç”¨é¡ºåºæ··ä¹±ä¸æ¸…
     }
 
     ~Person()
     {
-        cout << "ÕâÊÇPersonÎö¹¹º¯Êý" << endl;
+        cout << "è¿™æ˜¯Personæžæž„å‡½æ•°" << endl;
     }
 };
 
 void Test_01(void)
 {
     // Person p;
-    Person p(10, 20, 30, "Æ»¹ûProMax");
+    Person p(10, 20, 30, "è‹¹æžœProMax");
 
     cout << "A:" << p.A << endl;
     cout << "B:" << p.B << endl;

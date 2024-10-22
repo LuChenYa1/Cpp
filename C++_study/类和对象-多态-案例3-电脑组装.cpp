@@ -1,31 +1,31 @@
 #include<iostream>
 using namespace std;
 
-//* ³éÏóCPUÀà
+//* æŠ½è±¡CPUç±»
 class CPU
 {
 public:
-	//³éÏóµÄ¼ÆËãº¯Êı
+	//æŠ½è±¡çš„è®¡ç®—å‡½æ•°
 	virtual void calculate() = 0;
 };
 
-//* ³éÏóÏÔ¿¨Àà
+//* æŠ½è±¡æ˜¾å¡ç±»
 class VideoCard
 {
 public:
-	//³éÏóµÄÏÔÊ¾º¯Êı
+	//æŠ½è±¡çš„æ˜¾ç¤ºå‡½æ•°
 	virtual void display() = 0;
 };
 
-//* ³éÏóÄÚ´æÌõÀà
+//* æŠ½è±¡å†…å­˜æ¡ç±»
 class Memory
 {
 public:
-	//³éÏóµÄ´æ´¢º¯Êı
+	//æŠ½è±¡çš„å­˜å‚¨å‡½æ•°
 	virtual void storage() = 0;
 };
 
-//* µçÄÔÀà
+//* ç”µè„‘ç±»
 class Computer
 {
 public:
@@ -36,10 +36,10 @@ public:
 		m_mem = mem;
 	}
 
-	//Ìá¹©¹¤×÷µÄº¯Êı
+	//æä¾›å·¥ä½œçš„å‡½æ•°
 	void work()
 	{
-		//ÈÃÁã¼ş¹¤×÷ÆğÀ´£¬µ÷ÓÃ½Ó¿Ú
+		//è®©é›¶ä»¶å·¥ä½œèµ·æ¥ï¼Œè°ƒç”¨æ¥å£
 		m_cpu->calculate();
 
 		m_vc->display();
@@ -47,25 +47,25 @@ public:
 		m_mem->storage();
 	}
 
-	//Ìá¹©Îö¹¹º¯Êı ÊÍ·Å3¸öµçÄÔÁã¼ş
+	//æä¾›ææ„å‡½æ•° é‡Šæ”¾3ä¸ªç”µè„‘é›¶ä»¶
 	~Computer()
 	{
 
-		//ÊÍ·ÅCPUÁã¼ş
+		//é‡Šæ”¾CPUé›¶ä»¶
 		if (m_cpu != NULL)
 		{
 			delete m_cpu;
 			m_cpu = NULL;
 		}
 
-		//ÊÍ·ÅÏÔ¿¨Áã¼ş
+		//é‡Šæ”¾æ˜¾å¡é›¶ä»¶
 		if (m_vc != NULL)
 		{
 			delete m_vc;
 			m_vc = NULL;
 		}
 
-		//ÊÍ·ÅÄÚ´æÌõÁã¼ş
+		//é‡Šæ”¾å†…å­˜æ¡é›¶ä»¶
 		if (m_mem != NULL)
 		{
 			delete m_mem;
@@ -75,19 +75,19 @@ public:
 
 private:
 
-	CPU * m_cpu; //CPUµÄÁã¼şÖ¸Õë
-	VideoCard * m_vc; //ÏÔ¿¨Áã¼şÖ¸Õë
-	Memory * m_mem; //ÄÚ´æÌõÁã¼şÖ¸Õë
+	CPU * m_cpu; //CPUçš„é›¶ä»¶æŒ‡é’ˆ
+	VideoCard * m_vc; //æ˜¾å¡é›¶ä»¶æŒ‡é’ˆ
+	Memory * m_mem; //å†…å­˜æ¡é›¶ä»¶æŒ‡é’ˆ
 };
 
-//* ¾ßÌå³§ÉÌ
-//* Intel³§ÉÌ
+//* å…·ä½“å‚å•†
+//* Intelå‚å•†
 class IntelCPU :public CPU
 {
 public:
 	virtual void calculate()
 	{
-		cout << "IntelµÄCPU¿ªÊ¼¼ÆËãÁË£¡" << endl;
+		cout << "Intelçš„CPUå¼€å§‹è®¡ç®—äº†ï¼" << endl;
 	}
 };
 
@@ -96,7 +96,7 @@ class IntelVideoCard :public VideoCard
 public:
 	virtual void display()
 	{
-		cout << "IntelµÄÏÔ¿¨¿ªÊ¼ÏÔÊ¾ÁË£¡" << endl;
+		cout << "Intelçš„æ˜¾å¡å¼€å§‹æ˜¾ç¤ºäº†ï¼" << endl;
 	}
 };
 
@@ -105,17 +105,17 @@ class IntelMemory :public Memory
 public:
 	virtual void storage()
 	{
-		cout << "IntelµÄÄÚ´æÌõ¿ªÊ¼´æ´¢ÁË£¡" << endl;
+		cout << "Intelçš„å†…å­˜æ¡å¼€å§‹å­˜å‚¨äº†ï¼" << endl;
 	}
 };
 
-//* Lenovo³§ÉÌ
+//* Lenovoå‚å•†
 class LenovoCPU :public CPU
 {
 public:
 	virtual void calculate()
 	{
-		cout << "LenovoµÄCPU¿ªÊ¼¼ÆËãÁË£¡" << endl;
+		cout << "Lenovoçš„CPUå¼€å§‹è®¡ç®—äº†ï¼" << endl;
 	}
 };
 
@@ -124,7 +124,7 @@ class LenovoVideoCard :public VideoCard
 public:
 	virtual void display()
 	{
-		cout << "LenovoµÄÏÔ¿¨¿ªÊ¼ÏÔÊ¾ÁË£¡" << endl;
+		cout << "Lenovoçš„æ˜¾å¡å¼€å§‹æ˜¾ç¤ºäº†ï¼" << endl;
 	}
 };
 
@@ -133,34 +133,34 @@ class LenovoMemory :public Memory
 public:
 	virtual void storage()
 	{
-		cout << "LenovoµÄÄÚ´æÌõ¿ªÊ¼´æ´¢ÁË£¡" << endl;
+		cout << "Lenovoçš„å†…å­˜æ¡å¼€å§‹å­˜å‚¨äº†ï¼" << endl;
 	}
 };
 
 
 void test01()
 {
-	//µÚÒ»Ì¨µçÄÔÁã¼ş
+	//ç¬¬ä¸€å°ç”µè„‘é›¶ä»¶
 	CPU * intelCpu = new IntelCPU;
 	VideoCard * intelCard = new IntelVideoCard;
 	Memory * intelMem = new IntelMemory;
 
-	cout << "µÚÒ»Ì¨µçÄÔ¿ªÊ¼¹¤×÷£º" << endl;
-	//´´½¨µÚÒ»Ì¨µçÄÔ
+	cout << "ç¬¬ä¸€å°ç”µè„‘å¼€å§‹å·¥ä½œï¼š" << endl;
+	//åˆ›å»ºç¬¬ä¸€å°ç”µè„‘
 	Computer * computer1 = new Computer(intelCpu, intelCard, intelMem);
 	computer1->work();
 	delete computer1;
 
 	cout << "-----------------------" << endl;
-	cout << "µÚ¶şÌ¨µçÄÔ¿ªÊ¼¹¤×÷£º" << endl;
-	//µÚ¶şÌ¨µçÄÔ×é×°
+	cout << "ç¬¬äºŒå°ç”µè„‘å¼€å§‹å·¥ä½œï¼š" << endl;
+	//ç¬¬äºŒå°ç”µè„‘ç»„è£…
 	Computer * computer2 = new Computer(new LenovoCPU, new LenovoVideoCard, new LenovoMemory);;
 	computer2->work();
 	delete computer2;
 
 	cout << "-----------------------" << endl;
-	cout << "µÚÈıÌ¨µçÄÔ¿ªÊ¼¹¤×÷£º" << endl;
-	//µÚÈıÌ¨µçÄÔ×é×°
+	cout << "ç¬¬ä¸‰å°ç”µè„‘å¼€å§‹å·¥ä½œï¼š" << endl;
+	//ç¬¬ä¸‰å°ç”µè„‘ç»„è£…
 	Computer * computer3 = new Computer(new LenovoCPU, new IntelVideoCard, new LenovoMemory);;
 	computer3->work();
 	delete computer3;

@@ -5,22 +5,22 @@ using namespace std;
 
 int main(void)
 {
-	/* outÊä³ö<<
-	inÊäÈë>>
+	/* outè¾“å‡º<<
+	inè¾“å…¥>>
 
 	char ch;
-	cout << "ÇëÊäÈëchµÄÖµ" << endl;
-	cin >> ch;Ö»ÄÜÊäÈë×Ö·û£¬²»ÄÜÊÇÂëÖµ
-	cout << "chµÄÖµÊÇ" << ch << endl;
+	cout << "è¯·è¾“å…¥chçš„å€¼" << endl;
+	cin >> ch;åªèƒ½è¾“å…¥å­—ç¬¦ï¼Œä¸èƒ½æ˜¯ç å€¼
+	cout << "chçš„å€¼æ˜¯" << ch << endl;
 
 	string str;
-	cout << "ÇëÊäÈëstrµÄÖµ" << endl;
+	cout << "è¯·è¾“å…¥strçš„å€¼" << endl;
 	cin >> str;
-	cout << "strµÄÖµÊÇ" << str << endl;
+	cout << "strçš„å€¼æ˜¯" << str << endl;
  */
-	bool flag = 0;//²¼¶ûÀàĞÍ¸³Öµ²»ÄÜÊäÈëÓ¢ÎÄºÍĞ¡Êı£¬»á±»ÅĞ¶¨Îª¼Ù0
-	cout << "ÇëÊäÈëflagµÄÖµ" << endl;
+	bool flag = 0;//å¸ƒå°”ç±»å‹èµ‹å€¼ä¸èƒ½è¾“å…¥è‹±æ–‡å’Œå°æ•°ï¼Œä¼šè¢«åˆ¤å®šä¸ºå‡0
+	cout << "è¯·è¾“å…¥flagçš„å€¼" << endl;
 	cin >> flag;
-	cout << "flagµÄÖµÊÇ" << flag << endl;
+	cout << "flagçš„å€¼æ˜¯" << flag << endl;
 	return 0;
 }

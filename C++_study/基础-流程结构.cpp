@@ -3,17 +3,17 @@
 
 using namespace std;
 
-//* Ë³Ğò¡¢Ñ¡Ôñ¡¢Ñ­»·
+//* é¡ºåºã€é€‰æ‹©ã€å¾ªç¯
 int main(void)
 {
 	int a = 10;
 	float b = 11;
 	int c = 5;
 	 
-	// Ö¤Ã÷²»Í¬Êı¾İÀàĞÍ¿ÉÒÔ±È½Ï´óĞ¡
+	// è¯æ˜ä¸åŒæ•°æ®ç±»å‹å¯ä»¥æ¯”è¾ƒå¤§å°
 	if (a < b)
 	{
-		cout << "ÊÇµÄa<b" << endl;
+		cout << "æ˜¯çš„a<b" << endl;
 	}
 	else if (a == b)
 	{
@@ -21,10 +21,10 @@ int main(void)
 	}
 	else
 	{
-		cout << "É¶Ñ½ÕâÊÇ" << endl;
+		cout << "å•¥å‘€è¿™æ˜¯" << endl;
 	}
 
-	switch (a)//Ö»ÄÜÊÇÕûĞÍ»òÕß×Ö·ûĞÍ
+	switch (a)//åªèƒ½æ˜¯æ•´å‹æˆ–è€…å­—ç¬¦å‹
 	{
         case 1:break;
         case 2:break;

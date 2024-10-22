@@ -2,31 +2,31 @@
 
 using namespace std;
 
-//! ´¿Ðéº¯Êý  virtual ·µ»ØÖµ º¯ÊýÃû (ÐÎ²Î) = 0; 
-//! ÓÃÍ¾£ºÕâ¸öÀà±¾ÉíµÄÄÚÈÝ²»»á±»µ÷ÓÃ£¬Ö»ÊÇ×÷ÎªÒ»¸öÇÅÁº´æÔÚ£¬Òò´Ë¿ÉÒÔÖ±½ÓÐ´³É³éÏóÀà£¬ÎÞÐèÐ´º¯ÊýÌå
-//! ÀàÖÐÖ»ÒªÓÐÒ»¸ö´¿Ðéº¯Êý¾Í³ÆÎª³éÏóÀà
-//* ³éÏóÀàÌØµã£º
-//! ³éÏóÀàÎÞ·¨ÊµÀý»¯¶ÔÏó
-//! ×ÓÀà±ØÐëÖØÐ´¸¸ÀàÖÐµÄ´¿Ðéº¯Êý£¬·ñÔòÒ²ÊôÓÚ³éÏóÀà
+//! çº¯è™šå‡½æ•°  virtual è¿”å›žå€¼ å‡½æ•°å (å½¢å‚) = 0; 
+//! ç”¨é€”ï¼šè¿™ä¸ªç±»æœ¬èº«çš„å†…å®¹ä¸ä¼šè¢«è°ƒç”¨ï¼Œåªæ˜¯ä½œä¸ºä¸€ä¸ªæ¡¥æ¢å­˜åœ¨ï¼Œå› æ­¤å¯ä»¥ç›´æŽ¥å†™æˆæŠ½è±¡ç±»ï¼Œæ— éœ€å†™å‡½æ•°ä½“
+//! ç±»ä¸­åªè¦æœ‰ä¸€ä¸ªçº¯è™šå‡½æ•°å°±ç§°ä¸ºæŠ½è±¡ç±»
+//* æŠ½è±¡ç±»ç‰¹ç‚¹ï¼š
+//! æŠ½è±¡ç±»æ— æ³•å®žä¾‹åŒ–å¯¹è±¡
+//! å­ç±»å¿…é¡»é‡å†™çˆ¶ç±»ä¸­çš„çº¯è™šå‡½æ•°ï¼Œå¦åˆ™ä¹Ÿå±žäºŽæŠ½è±¡ç±»
 
-//* ´¿ÐéÎö¹¹ºÍÐéÎö¹¹µÄÓï·¨ºÍÆÕÍ¨³ÉÔ±º¯ÊýÒ»Ñù£¬ÓÃÓÚ×ÓÀà´æÔÚ³ÉÔ±Ö¸ÕëÖ¸Ïò¶ÑÇø¿Õ¼äÊ±½øÐÐÊÍ·Å£¨µ«¸¸Àà²»´æÔÚ£©£¨Ê¹ÓÃ¶àÌ¬Ê±£©
+//* çº¯è™šæžæž„å’Œè™šæžæž„çš„è¯­æ³•å’Œæ™®é€šæˆå‘˜å‡½æ•°ä¸€æ ·ï¼Œç”¨äºŽå­ç±»å­˜åœ¨æˆå‘˜æŒ‡é’ˆæŒ‡å‘å †åŒºç©ºé—´æ—¶è¿›è¡Œé‡Šæ”¾ï¼ˆä½†çˆ¶ç±»ä¸å­˜åœ¨ï¼‰ï¼ˆä½¿ç”¨å¤šæ€æ—¶ï¼‰
 
-//! ´¿Ðéº¯ÊýÓëÐéº¯ÊýµÄÇø±ð£º
-//* ´¿Ðéº¯ÊýÊ¹Àà³ÉÎª³éÏóÀà£¬ÎÞ·¨ÊµÀý»¯¶ÔÏó£¬µ«Ðéº¯Êý²»Ó°ÏìÀà
+//! çº¯è™šå‡½æ•°ä¸Žè™šå‡½æ•°çš„åŒºåˆ«ï¼š
+//* çº¯è™šå‡½æ•°ä½¿ç±»æˆä¸ºæŠ½è±¡ç±»ï¼Œæ— æ³•å®žä¾‹åŒ–å¯¹è±¡ï¼Œä½†è™šå‡½æ•°ä¸å½±å“ç±»
 
-//* ³éÏóÖÆ×÷ÒûÆ·(¸¸Àà)
+//* æŠ½è±¡åˆ¶ä½œé¥®å“(çˆ¶ç±»)
 class AbstractDrinking 
 {
 public:
-	//ÉÕË®
+	//çƒ§æ°´
 	virtual void Boil() = 0;
-	//³åÅÝ
+	//å†²æ³¡
 	virtual void Brew() = 0;
-	//µ¹Èë±­ÖÐ
+	//å€’å…¥æ¯ä¸­
 	virtual void PourInCup() = 0;
-	//¼ÓÈë¸¨ÁÏ
+	//åŠ å…¥è¾…æ–™
 	virtual void PutSomething() = 0;
-	//¹æ¶¨Á÷³Ì
+	//è§„å®šæµç¨‹
 	void MakeDrink() {
 		Boil();
 		Brew();
@@ -35,51 +35,51 @@ public:
 	}
 };
 
-//* ÖÆ×÷¿§·È£¨×ÓÀà-¶Ô¸¸Àà½øÐÐÏ¸»¯£©
+//* åˆ¶ä½œå’–å•¡ï¼ˆå­ç±»-å¯¹çˆ¶ç±»è¿›è¡Œç»†åŒ–ï¼‰
 class Coffee : public AbstractDrinking 
 {
 public:
-	//ÉÕË®
+	//çƒ§æ°´
 	virtual void Boil() {
-		cout << "ÖóÅ©·òÉ½Èª!" << endl;
+		cout << "ç…®å†œå¤«å±±æ³‰!" << endl;
 	}
-	//³åÅÝ
+	//å†²æ³¡
 	virtual void Brew() {
-		cout << "³åÅÝ¿§·È!" << endl;
+		cout << "å†²æ³¡å’–å•¡!" << endl;
 	}
-	//µ¹Èë±­ÖÐ
+	//å€’å…¥æ¯ä¸­
 	virtual void PourInCup() {
-		cout << "½«¿§·Èµ¹Èë±­ÖÐ!" << endl;
+		cout << "å°†å’–å•¡å€’å…¥æ¯ä¸­!" << endl;
 	}
-	//¼ÓÈë¸¨ÁÏ
+	//åŠ å…¥è¾…æ–™
 	virtual void PutSomething() {
-		cout << "¼ÓÈëÅ£ÄÌ!" << endl;
+		cout << "åŠ å…¥ç‰›å¥¶!" << endl;
 	}
 };
 
-//* ÖÆ×÷²èË®£¨×ÓÀà-¶Ô¸¸Àà½øÐÐÏ¸»¯£©
+//* åˆ¶ä½œèŒ¶æ°´ï¼ˆå­ç±»-å¯¹çˆ¶ç±»è¿›è¡Œç»†åŒ–ï¼‰
 class Tea : public AbstractDrinking 
 {
 public:
-	//ÉÕË®
+	//çƒ§æ°´
 	virtual void Boil() {
-		cout << "Öó×ÔÀ´Ë®!" << endl;
+		cout << "ç…®è‡ªæ¥æ°´!" << endl;
 	}
-	//³åÅÝ
+	//å†²æ³¡
 	virtual void Brew() {
-		cout << "³åÅÝ²èÒ¶!" << endl;
+		cout << "å†²æ³¡èŒ¶å¶!" << endl;
 	}
-	//µ¹Èë±­ÖÐ
+	//å€’å…¥æ¯ä¸­
 	virtual void PourInCup() {
-		cout << "½«²èË®µ¹Èë±­ÖÐ!" << endl;
+		cout << "å°†èŒ¶æ°´å€’å…¥æ¯ä¸­!" << endl;
 	}
-	//¼ÓÈë¸¨ÁÏ
+	//åŠ å…¥è¾…æ–™
 	virtual void PutSomething() {
-		cout << "¼ÓÈëèÛè½!" << endl;
+		cout << "åŠ å…¥æž¸æž!" << endl;
 	}
 };
 
-//* ÒµÎñº¯Êý
+//* ä¸šåŠ¡å‡½æ•°
 void DoWork(AbstractDrinking* drink) 
 {
 	drink->MakeDrink();

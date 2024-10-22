@@ -2,17 +2,17 @@
 
 using namespace std;
 
-//! �Ӻ���������أ�ֻ��������������ӣ��������������ĸ�������
+//! 加号运算符重载，只能是两个东西相加，不能是三个、四个。。。
 
-//! ��д����Result = A + B;
-//* ��ʡ��д��ʱҪ�����޷���𾿾�ʹ�õ��ĸ����غ��������������ͬһ������Ĳ�ͬ���غ���Ҫ����������Ͳ�ͬ
+//! 简化写法：Result = A + B;
+//* 用省略写法时要避免无法辨别究竟使用的哪个重载函数的情况，所以同一运算符的不同重载函数要做到相加类型不同
 
 class Person
 {
 public:
     int A;
     int B;
-    //* ��Ա�������ؼӺţ�ʵ��������ֵ��Ӧ���
+    //* 成员函数重载加号，实现两对象值对应相加
     // Person operator+(Person &p)
     // {
     //     Person Temp;
@@ -22,7 +22,7 @@ public:
     // }
 };
 
-//* ȫ�ֺ������ؼӺţ�ʵ��������ֵ��Ӧ���
+//* 全局函数重载加号，实现两对象值对应相加
 Person operator+(Person & p1, Person & p2)
 {
     Person Temp;
@@ -31,7 +31,7 @@ Person operator+(Person & p1, Person & p2)
     return Temp;
 }
 
-//* ȫ�ֺ������ؼӺţ�ʵ�ֶ��󣨵ĳ�Ա�������ͱ������
+//* 全局函数重载加号，实现对象（的成员变量）和变量相加
 Person operator+(Person & p1, int a)
 {
     Person Temp;

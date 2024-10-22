@@ -2,19 +2,19 @@
 
 using namespace std;
 
-//* ×ÓÀàÊµÀý»¯¶ÔÏóÊ±£¬µÚÒ»²½ÊÇ¼Ì³Ð¸¸ÀàµÄËùÓÐ³ÉÔ±£¬²¢Ö´ÐÐ¸¸ÀàµÄ¹¹Ôìº¯Êý£¬È»ºó»Øµ½×ÓÀàÖ´ÐÐ×Ô¼ºµÄ¹¹Ôìº¯Êý
-//* ÊÍ·Å×ÓÀà¶ÔÏóÊ±£¬×ñÊØÕ»µÄÂß¼­£¬ÏÈÈëºó³ö£¬¹ÊÏÈÖ´ÐÐ×ÓÀàµÄÎö¹¹º¯Êý£¬ºóÖ´ÐÐ¸¸ÀàµÄÎö¹¹º¯Êý
+//* å­ç±»å®žä¾‹åŒ–å¯¹è±¡æ—¶ï¼Œç¬¬ä¸€æ­¥æ˜¯ç»§æ‰¿çˆ¶ç±»çš„æ‰€æœ‰æˆå‘˜ï¼Œå¹¶æ‰§è¡Œçˆ¶ç±»çš„æž„é€ å‡½æ•°ï¼Œç„¶åŽå›žåˆ°å­ç±»æ‰§è¡Œè‡ªå·±çš„æž„é€ å‡½æ•°
+//* é‡Šæ”¾å­ç±»å¯¹è±¡æ—¶ï¼Œéµå®ˆæ ˆçš„é€»è¾‘ï¼Œå…ˆå…¥åŽå‡ºï¼Œæ•…å…ˆæ‰§è¡Œå­ç±»çš„æžæž„å‡½æ•°ï¼ŒåŽæ‰§è¡Œçˆ¶ç±»çš„æžæž„å‡½æ•°
 
 class Father
 {
 public:
     Father()
     {
-        cout << "Ö´ÐÐ¸¸Àà¹¹Ôìº¯Êý" << endl;
+        cout << "æ‰§è¡Œçˆ¶ç±»æž„é€ å‡½æ•°" << endl;
     }
     ~Father()
     {
-        cout << "Ö´ÐÐ¸¸ÀàÎö¹¹º¯Êý" << endl;
+        cout << "æ‰§è¡Œçˆ¶ç±»æžæž„å‡½æ•°" << endl;
     }
 
     int a;
@@ -25,11 +25,11 @@ class Son : public Father
 public:
     Son()
     {
-        cout << "Ö´ÐÐ×ÓÀà¹¹Ôìº¯Êý" << endl;
+        cout << "æ‰§è¡Œå­ç±»æž„é€ å‡½æ•°" << endl;
     }
     ~Son()
     {
-        cout << "Ö´ÐÐ×ÓÀàÎö¹¹º¯Êý" << endl;
+        cout << "æ‰§è¡Œå­ç±»æžæž„å‡½æ•°" << endl;
     }
     int a;
     int b;
@@ -37,7 +37,7 @@ public:
 
 int main()
 {
-    cout << "×ÓÀà¶ÔÏóÓÐ" << sizeof(Son) << "¸ö×Ö½Ú" << endl;//¼Ì³Ð×Ô¸¸ÀàµÄ±äÁ¿a + ×ÓÀà±¾Éí¸öÐÔ»¯µÄ±äÁ¿b
+    cout << "å­ç±»å¯¹è±¡æœ‰" << sizeof(Son) << "ä¸ªå­—èŠ‚" << endl;//ç»§æ‰¿è‡ªçˆ¶ç±»çš„å˜é‡a + å­ç±»æœ¬èº«ä¸ªæ€§åŒ–çš„å˜é‡b
 
     Son son1;
 

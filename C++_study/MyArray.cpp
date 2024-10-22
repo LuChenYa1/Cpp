@@ -7,40 +7,40 @@ using namespace std;
 void printIntArray(MyArray<int>& arr) 
 {
 	for (int i = 0; i < arr.getSize(); i++) 
-		cout << arr[i] << " ";//ÕâÀïÊ¹ÓÃÁË[]ÖØÔØ£¬Ôö¼ÓÁË¿É¶ÁĞÔ
+		cout << arr[i] << " ";//è¿™é‡Œä½¿ç”¨äº†[]é‡è½½ï¼Œå¢åŠ äº†å¯è¯»æ€§
 	cout << endl;
 }
 
-//²âÊÔÄÚÖÃÊı¾İÀàĞÍ
+//æµ‹è¯•å†…ç½®æ•°æ®ç±»å‹
 void test01()
 {
 	MyArray<int> array1(10);
 	for (int i = 0; i < 10; i++)
 		array1.Push_Back(i);
 	
-	cout << "array1´òÓ¡Êä³ö£º" << endl;
+	cout << "array1æ‰“å°è¾“å‡ºï¼š" << endl;
 	printIntArray(array1);
-	cout << "array1µÄ´óĞ¡£º" << array1.getSize() << endl;
-	cout << "array1µÄÈİÁ¿£º" << array1.getCapacity() << endl;
+	cout << "array1çš„å¤§å°ï¼š" << array1.getSize() << endl;
+	cout << "array1çš„å®¹é‡ï¼š" << array1.getCapacity() << endl;
 
 	cout << "--------------------------" << endl;
 
 	MyArray<int> array2(array1);
 	array2.Pop_Back();
-	cout << "array2´òÓ¡Êä³ö£º" << endl;
+	cout << "array2æ‰“å°è¾“å‡ºï¼š" << endl;
 	printIntArray(array2);
-	cout << "array2µÄ´óĞ¡£º" << array2.getSize() << endl;
-	cout << "array2µÄÈİÁ¿£º" << array2.getCapacity() << endl;
+	cout << "array2çš„å¤§å°ï¼š" << array2.getSize() << endl;
+	cout << "array2çš„å®¹é‡ï¼š" << array2.getCapacity() << endl;
 }
 
-//²âÊÔ×Ô¶¨ÒåÊı¾İÀàĞÍ
+//æµ‹è¯•è‡ªå®šä¹‰æ•°æ®ç±»å‹
 class Person 
 {
 public:
-    //* Éæ¼°ÈıÖÖÄ¬ÈÏ¹¹Ôìº¯ÊıµÄÓ¦ÓÃ
-    //* ÓÃ»§Ğ´ÁËÓĞ²Î¹¹Ôì£¬ÔòÄ¬ÈÏÎŞ²Î¹¹ÔìÏûÊ§£¬¿½±´¹¹ÔìÈÔ´æÔÚ
-    //* ËùÒÔÕâ¸öÀàµÄ¶ÔÏó¿ÉÒÔÊ¹ÓÃ p1 = p2 Ö±½Ó¿½±´Ê½¸³Öµ£¨²»ÊÇ³õÊ¼»¯Ò²¿ÉÒÔÓÃÕâ¸ö¿½±´¹¹Ôì£¬ÏêÇé¿´ÏÂ·½´úÂë£©
-    //* ×¢Òâ²»ÄÜÓĞÖ¸Õë£¬·ñÔò»á·¢ÉúÇ³¿½±´
+    //* æ¶‰åŠä¸‰ç§é»˜è®¤æ„é€ å‡½æ•°çš„åº”ç”¨
+    //* ç”¨æˆ·å†™äº†æœ‰å‚æ„é€ ï¼Œåˆ™é»˜è®¤æ— å‚æ„é€ æ¶ˆå¤±ï¼Œæ‹·è´æ„é€ ä»å­˜åœ¨
+    //* æ‰€ä»¥è¿™ä¸ªç±»çš„å¯¹è±¡å¯ä»¥ä½¿ç”¨ p1 = p2 ç›´æ¥æ‹·è´å¼èµ‹å€¼ï¼ˆä¸æ˜¯åˆå§‹åŒ–ä¹Ÿå¯ä»¥ç”¨è¿™ä¸ªæ‹·è´æ„é€ ï¼Œè¯¦æƒ…çœ‹ä¸‹æ–¹ä»£ç ï¼‰
+    //* æ³¨æ„ä¸èƒ½æœ‰æŒ‡é’ˆï¼Œå¦åˆ™ä¼šå‘ç”Ÿæµ…æ‹·è´
 	Person() {} 
     Person(string name, int age) 
     {
@@ -55,20 +55,20 @@ public:
 void printPersonArray(MyArray<Person>& personArr)
 {
 	for (int i = 0; i < personArr.getSize(); i++) 
-		cout << "ĞÕÃû£º" << personArr[i].m_Name << " ÄêÁä£º " << personArr[i].m_Age << endl;
+		cout << "å§“åï¼š" << personArr[i].m_Name << " å¹´é¾„ï¼š " << personArr[i].m_Age << endl;
 }
 
 void test02()
 {
-	//´´½¨Êı×é
+	//åˆ›å»ºæ•°ç»„
 	MyArray<Person> pArray(10);
-	Person p1("ËïÎò¿Õ", 30);
-	Person p2("º«ĞÅ", 20);
-	Person p3("æ§¼º", 18);
-	Person p4("ÍõÕÑ¾ı", 15);
-	Person p5("ÕÔÔÆ", 24);
+	Person p1("å­™æ‚Ÿç©º", 30);
+	Person p2("éŸ©ä¿¡", 20);
+	Person p3("å¦²å·±", 18);
+	Person p4("ç‹æ˜­å›", 15);
+	Person p5("èµµäº‘", 24);
 
-	//²åÈëÊı¾İ
+	//æ’å…¥æ•°æ®
 	pArray.Push_Back(p1);
 	pArray.Push_Back(p2);
 	pArray.Push_Back(p3);
@@ -77,8 +77,8 @@ void test02()
 
 	printPersonArray(pArray);
 
-	cout << "pArrayµÄ´óĞ¡£º" << pArray.getSize() << endl;
-	cout << "pArrayµÄÈİÁ¿£º" << pArray.getCapacity() << endl;
+	cout << "pArrayçš„å¤§å°ï¼š" << pArray.getSize() << endl;
+	cout << "pArrayçš„å®¹é‡ï¼š" << pArray.getCapacity() << endl;
 }
 
 int main() 

@@ -1,13 +1,13 @@
 #include <iostream>
 using namespace std;
 
-//! ¶ÔÏóµÄ³õÊ¼»¯ºÍÇåÀí
-//* ¹¹Ôìº¯ÊýºÍÎö¹¹º¯Êý
+//! å¯¹è±¡çš„åˆå§‹åŒ–å’Œæ¸…ç†
+//* æž„é€ å‡½æ•°å’Œæžæž„å‡½æ•°
 
 
-//* ´´½¨Ò»¸öÀà£¬Èç¹ûÓÃ»§²»Ìí¼Ó£¬Ôò±àÒëÆ÷»áÌí¼ÓÈý¸öÄ¬ÈÏº¯Êý£¨²»¿É¼û£©£ºÎÞ²Î¹¹Ôì£¨¿Õº¯Êý£©¡¢Îö¹¹º¯Êý£¨¿Õº¯Êý£©¡¢¿½±´¹¹Ôìº¯Êý£¨¶ÔÏóÈ«²¿ÊôÐÔ½øÐÐÖµ¿½±´£©
-//* Èç¹ûÓÃ»§¶¨ÒåÁËÓÐ²Î¹¹Ôìº¯Êý£¬Ôò±àÒëÆ÷²»ÔÙÌá¹©Ä¬ÈÏµÄÎÞ²Î¹¹Ôìº¯Êý£¬µ«ÊÇ»áÌá¹©¿½±´¹¹Ôìº¯Êý
-//* Èç¹ûÓÃ»§¶¨ÒåÁË¿½±´¹¹Ôìº¯Êý£¬Ôò±àÒëÆ÷²»ÔÙÌá¹©ÆäËûËùÓÐ¹¹Ôìº¯Êý
+//* åˆ›å»ºä¸€ä¸ªç±»ï¼Œå¦‚æžœç”¨æˆ·ä¸æ·»åŠ ï¼Œåˆ™ç¼–è¯‘å™¨ä¼šæ·»åŠ ä¸‰ä¸ªé»˜è®¤å‡½æ•°ï¼ˆä¸å¯è§ï¼‰ï¼šæ— å‚æž„é€ ï¼ˆç©ºå‡½æ•°ï¼‰ã€æžæž„å‡½æ•°ï¼ˆç©ºå‡½æ•°ï¼‰ã€æ‹·è´æž„é€ å‡½æ•°ï¼ˆå¯¹è±¡å…¨éƒ¨å±žæ€§è¿›è¡Œå€¼æ‹·è´ï¼‰
+//* å¦‚æžœç”¨æˆ·å®šä¹‰äº†æœ‰å‚æž„é€ å‡½æ•°ï¼Œåˆ™ç¼–è¯‘å™¨ä¸å†æä¾›é»˜è®¤çš„æ— å‚æž„é€ å‡½æ•°ï¼Œä½†æ˜¯ä¼šæä¾›æ‹·è´æž„é€ å‡½æ•°
+//* å¦‚æžœç”¨æˆ·å®šä¹‰äº†æ‹·è´æž„é€ å‡½æ•°ï¼Œåˆ™ç¼–è¯‘å™¨ä¸å†æä¾›å…¶ä»–æ‰€æœ‰æž„é€ å‡½æ•°
 
 class Person
 {
@@ -23,48 +23,48 @@ public:
     {
         return *pHeight;
     }
-    //! 1¡¢¹¹Ôìº¯Êý ½øÐÐ³õÊ¼»¯µÄ²Ù×÷
-    //* Ã»ÓÐ·µ»ØÖµ£¬¿ÉÒÔÓÐ²ÎÊý£¨¿ÉÒÔ·¢Éúº¯ÊýÖØÔØ£© 
-    //* º¯ÊýÃûºÍÀàÃûÏàÍ¬
-    //* ´´½¨¶ÔÏóÊ±£¬»á×Ô¶¯µ÷ÓÃÒ»´Î¹¹Ôìº¯Êý£¬ÇÒÖ»µ÷ÓÃÒ»´Î
+    //! 1ã€æž„é€ å‡½æ•° è¿›è¡Œåˆå§‹åŒ–çš„æ“ä½œ
+    //* æ²¡æœ‰è¿”å›žå€¼ï¼Œå¯ä»¥æœ‰å‚æ•°ï¼ˆå¯ä»¥å‘ç”Ÿå‡½æ•°é‡è½½ï¼‰ 
+    //* å‡½æ•°åå’Œç±»åç›¸åŒ
+    //* åˆ›å»ºå¯¹è±¡æ—¶ï¼Œä¼šè‡ªåŠ¨è°ƒç”¨ä¸€æ¬¡æž„é€ å‡½æ•°ï¼Œä¸”åªè°ƒç”¨ä¸€æ¬¡
 
-    //* Á½ÖÖ·ÖÀà
-    //* ÎÞ²ÎºÍÓÐ²Î
-    //* ÆÕÍ¨ºÍ¿½±´
+    //* ä¸¤ç§åˆ†ç±»
+    //* æ— å‚å’Œæœ‰å‚
+    //* æ™®é€šå’Œæ‹·è´
     Person()
     {
-        cout << "Person ÎÞ²Î/ÆÕÍ¨¹¹Ôìº¯Êý£¡" << endl;
+        cout << "Person æ— å‚/æ™®é€šæž„é€ å‡½æ•°ï¼" << endl;
     }
     Person(int a, int Height)
     {
         Age = a;
         pHeight = new int (Height);
-        cout << "Person ÓÐ²Î/ÆÕÍ¨¹¹Ôìº¯Êý£¡" << endl;
+        cout << "Person æœ‰å‚/æ™®é€šæž„é€ å‡½æ•°ï¼" << endl;
     }
     Person(int a)
     {
         Age = a;
-        cout << "Person ÒþÊ½×ª»»·¨µ÷ÓÃÓÐ²Î¹¹Ôìº¯Êý" << endl;
+        cout << "Person éšå¼è½¬æ¢æ³•è°ƒç”¨æœ‰å‚æž„é€ å‡½æ•°" << endl;
     }
 
-    Person(const Person &p)//¿½±´¹¹Ôìº¯Êý²»ÔÊÐíÐÎ²Î´´½¨ÐÂµÄ¿Õ¼ä£¨¿ÉÄÜ»áÌ×ÍÞ£©£¬ËùÒÔÖ»ÄÜ²ÉÈ¡ÒýÓÃ
+    Person(const Person &p)//æ‹·è´æž„é€ å‡½æ•°ä¸å…è®¸å½¢å‚åˆ›å»ºæ–°çš„ç©ºé—´ï¼ˆå¯èƒ½ä¼šå¥—å¨ƒï¼‰ï¼Œæ‰€ä»¥åªèƒ½é‡‡å–å¼•ç”¨
     {
         Age = p.Age;
         pHeight = new int(*p.pHeight);
-        cout << "Person ¿½±´¹¹Ôìº¯Êý£¡" << endl;
+        cout << "Person æ‹·è´æž„é€ å‡½æ•°ï¼" << endl;
     }
 
-    //! 2¡¢Îö¹¹º¯Êý ½øÐÐÇåÀíµÄ²Ù×÷
-    //* Ã»ÓÐ·µ»ØÖµ£¬Ã»ÓÐ²ÎÊý
-    //* º¯ÊýÃûºÍÀàÃûÏàÍ¬
-    //* Ïú»Ù¶ÔÏóÖ®Ç°£¬»á×Ô¶¯µ÷ÓÃÒ»´ÎÎö¹¹º¯Êý£¬ÇÒÖ»µ÷ÓÃÒ»´Î
+    //! 2ã€æžæž„å‡½æ•° è¿›è¡Œæ¸…ç†çš„æ“ä½œ
+    //* æ²¡æœ‰è¿”å›žå€¼ï¼Œæ²¡æœ‰å‚æ•°
+    //* å‡½æ•°åå’Œç±»åç›¸åŒ
+    //* é”€æ¯å¯¹è±¡ä¹‹å‰ï¼Œä¼šè‡ªåŠ¨è°ƒç”¨ä¸€æ¬¡æžæž„å‡½æ•°ï¼Œä¸”åªè°ƒç”¨ä¸€æ¬¡
     ~Person()
     {
-        cout << "Person Îö¹¹º¯Êý£¡" << endl;
+        cout << "Person æžæž„å‡½æ•°ï¼" << endl;
 
-        //* Îö¹¹º¯ÊýÓÃ·¨£ºÊÍ·ÅÔÚ¶ÑÇøÉêÇëµÄ¿Õ¼ä
-        //! Ç³¿½±´£ºÈô¶ÔÏó³ÉÔ±º¬ÓÐ¶ÑÇøÖ¸Õë£¬Ê¹ÓÃÄ¬ÈÏ¿½±´º¯Êý»áÊ¹Á½¶ÔÏóµÄÖ¸ÕëÖµÏàÍ¬£¬Ö¸ÏòÍ¬Ò»¿é¿Õ¼ä£¬µ±Á½¸ö¶ÔÏóÏÈºóÊÍ·Å£¬ºóÊÍ·ÅµÄ¶ÔÏóÖ´ÐÐÎö¹¹º¯ÊýÊ±£¬»áÔÙ´Î delete Í¬Ò»¿é¿Õ¼ä£¬µ¼ÖÂ±¨´í
-        //* Éî¿½±´(½â¾ö·½·¨))£ºÊ¹ÓÃ×Ô¶¨ÒåµÄ¿½±´¹¹Ôìº¯Êý£¬ÉêÇëÒ»¿é×¨ÃÅµÄ¿Õ¼äºÍÔ­¶ÔÏóµÄ¶ÑÇø¿Õ¼äÇø·Ö¿ª
+        //* æžæž„å‡½æ•°ç”¨æ³•ï¼šé‡Šæ”¾åœ¨å †åŒºç”³è¯·çš„ç©ºé—´
+        //! æµ…æ‹·è´ï¼šè‹¥å¯¹è±¡æˆå‘˜å«æœ‰å †åŒºæŒ‡é’ˆï¼Œä½¿ç”¨é»˜è®¤æ‹·è´å‡½æ•°ä¼šä½¿ä¸¤å¯¹è±¡çš„æŒ‡é’ˆå€¼ç›¸åŒï¼ŒæŒ‡å‘åŒä¸€å—ç©ºé—´ï¼Œå½“ä¸¤ä¸ªå¯¹è±¡å…ˆåŽé‡Šæ”¾ï¼ŒåŽé‡Šæ”¾çš„å¯¹è±¡æ‰§è¡Œæžæž„å‡½æ•°æ—¶ï¼Œä¼šå†æ¬¡ delete åŒä¸€å—ç©ºé—´ï¼Œå¯¼è‡´æŠ¥é”™
+        //* æ·±æ‹·è´(è§£å†³æ–¹æ³•))ï¼šä½¿ç”¨è‡ªå®šä¹‰çš„æ‹·è´æž„é€ å‡½æ•°ï¼Œç”³è¯·ä¸€å—ä¸“é—¨çš„ç©ºé—´å’ŒåŽŸå¯¹è±¡çš„å †åŒºç©ºé—´åŒºåˆ†å¼€
         delete(pHeight);
         pHeight = NULL;
     }
@@ -72,34 +72,34 @@ public:
 
 void Test_01(void)
 {
-    //* 1¡¢À¨ºÅ·¨
-    //! µ÷ÓÃÎÞ²Î¹¹ÔìÊ±²»Òª¼ÓÀ¨ºÅ
-    Person p1;//* µ÷ÓÃÎÞ²Î¹¹Ôì
-    //! Person p1();//* ×¢Òâ£º±àÒëÆ÷ÈÏÎªÊÇº¯ÊýÉùÃ÷£¬²»»á´´½¨¶ÔÏó
-    Person p2(10, 160);//µ÷ÓÃÓÐ²Î¹¹Ôì
-    Person p3(p2);//µ÷ÓÃ¿½±´¹¹Ôì
+    //* 1ã€æ‹¬å·æ³•
+    //! è°ƒç”¨æ— å‚æž„é€ æ—¶ä¸è¦åŠ æ‹¬å·
+    Person p1;//* è°ƒç”¨æ— å‚æž„é€ 
+    //! Person p1();//* æ³¨æ„ï¼šç¼–è¯‘å™¨è®¤ä¸ºæ˜¯å‡½æ•°å£°æ˜Žï¼Œä¸ä¼šåˆ›å»ºå¯¹è±¡
+    Person p2(10, 160);//è°ƒç”¨æœ‰å‚æž„é€ 
+    Person p3(p2);//è°ƒç”¨æ‹·è´æž„é€ 
     cout << "p2.Age = " << p2.ReadAge() << endl;
     cout << "p3.Age = " << p3.ReadAge() << endl;
 
-    //* 2¡¢ÏÔÊ¾·¨
+    //* 2ã€æ˜¾ç¤ºæ³•
     Person p4 = Person(20, 160);
     Person p5 = Person(p2);
     cout << "aaa" << endl;
-    Person(10, 160);//ÄäÃû¶ÔÏó£¬µ±Ç°ÐÐÖ´ÐÐ½áÊøºó£¬ÏµÍ³»á×Ô¶¯»ØÊÕ¸ÃÄäÃû¶ÔÏó
-    // Person(p3);//²»ÒªÀûÓÃ¿½±´¹¹Ôìº¯Êý³õÊ¼»¯ÄäÃû¶ÔÏóÇÒ²»¸³Öµ¸øÓÐÃû×ÖµÄ¶ÔÏó£¬±àÒëÆ÷ÈÏÎª Person(p3) === Person p3£¬µ¼ÖÂÖØ¶¨Òå´íÎó
+    Person(10, 160);//åŒ¿åå¯¹è±¡ï¼Œå½“å‰è¡Œæ‰§è¡Œç»“æŸåŽï¼Œç³»ç»Ÿä¼šè‡ªåŠ¨å›žæ”¶è¯¥åŒ¿åå¯¹è±¡
+    // Person(p3);//ä¸è¦åˆ©ç”¨æ‹·è´æž„é€ å‡½æ•°åˆå§‹åŒ–åŒ¿åå¯¹è±¡ä¸”ä¸èµ‹å€¼ç»™æœ‰åå­—çš„å¯¹è±¡ï¼Œç¼–è¯‘å™¨è®¤ä¸º Person(p3) === Person p3ï¼Œå¯¼è‡´é‡å®šä¹‰é”™è¯¯
 
-    //* 3¡¢ÒþÊ½×ª»»·¨
+    //* 3ã€éšå¼è½¬æ¢æ³•
     Person p6 = 30;
     Person p7 = p4;
 }
 
-//Ê²Ã´Ê±ºò»áµ÷ÓÃ¹¹Ôì/Îö¹¹º¯Êý£¿Ö»Òª´´½¨ÁË¶ÔÏó£¬°üÀ¨ÐÎ²Î¡£
-void DoWork_01(Person p)//* ÐÎ²Î´´½¨¶ÔÏó
+//ä»€ä¹ˆæ—¶å€™ä¼šè°ƒç”¨æž„é€ /æžæž„å‡½æ•°ï¼Ÿåªè¦åˆ›å»ºäº†å¯¹è±¡ï¼ŒåŒ…æ‹¬å½¢å‚ã€‚
+void DoWork_01(Person p)//* å½¢å‚åˆ›å»ºå¯¹è±¡
 {
     p.ReadAge();
 }
 
-Person DoWork_02(void)//* ·µ»ØÖµ´´½¨¶ÔÏó
+Person DoWork_02(void)//* è¿”å›žå€¼åˆ›å»ºå¯¹è±¡
 {
     Person p_in(20, 170);
     cout << &p_in << endl;
@@ -110,7 +110,7 @@ void Test_02()
 {
     // Person p(10);
     // DoWork_01(p);
-    Person p_out = DoWork_02();//×¢Òâ£ºÕâÀïµÄ¶ÔÏó p_out ¼Ì³ÐÁË DoWork_02 º¯ÊýÄÚ²¿µÄ¼´½«±»ÊÍ·ÅµÄ¶ÔÏó p_in µÄ¿Õ¼ä£¬Òò´Ë²»ÔÙµ÷ÓÃ¹¹ÔìºÍÎö¹¹º¯Êý
+    Person p_out = DoWork_02();//æ³¨æ„ï¼šè¿™é‡Œçš„å¯¹è±¡ p_out ç»§æ‰¿äº† DoWork_02 å‡½æ•°å†…éƒ¨çš„å³å°†è¢«é‡Šæ”¾çš„å¯¹è±¡ p_in çš„ç©ºé—´ï¼Œå› æ­¤ä¸å†è°ƒç”¨æž„é€ å’Œæžæž„å‡½æ•°
     cout << &p_out << endl;
     cout << p_out.ReadHeight() << endl;
 }

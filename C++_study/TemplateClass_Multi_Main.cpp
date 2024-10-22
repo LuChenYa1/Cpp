@@ -2,9 +2,9 @@
 using namespace std;
 
 // #include "person.h"
-// #include "person.cpp" //½â¾ö·½Ê½1£¬°üº¬cppÔ´ÎÄ¼ş
+// #include "person.cpp" //è§£å†³æ–¹å¼1ï¼ŒåŒ…å«cppæºæ–‡ä»¶
 
-//½â¾ö·½Ê½2£¬½«ÉùÃ÷ºÍÊµÏÖĞ´µ½Ò»Æğ£¬ÎÄ¼şºó×ºÃû¸ÄÎª.hpp
+//è§£å†³æ–¹å¼2ï¼Œå°†å£°æ˜å’Œå®ç°å†™åˆ°ä¸€èµ·ï¼Œæ–‡ä»¶åç¼€åæ”¹ä¸º.hpp
 #include "TemplateClass_Multi_Func.hpp"
 
 int main() 

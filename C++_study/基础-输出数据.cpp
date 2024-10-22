@@ -4,14 +4,14 @@
 
 using namespace std;
 
-//C++ cout endline »»ĞĞ
+//C++ cout endline æ¢è¡Œ
 int main()
 {
-	cout << "Ò»ÖÜ¹²ÓĞ" << DAY << "Ìì" << endl;
+	cout << "ä¸€å‘¨å…±æœ‰" << DAY << "å¤©" << endl;
 
-	const int mouth = 12;  //const ³£Á¿²»¿ÉĞŞ¸Ä
+	const int mouth = 12;  //const å¸¸é‡ä¸å¯ä¿®æ”¹
 	//mouth = 14;
-	cout << "Ò»Äê¹²ÓĞ" << mouth << "ÔÂ" << endl;
+	cout << "ä¸€å¹´å…±æœ‰" << mouth << "æœˆ" << endl;
 
 	int aaa = 100;
 	cout << aaa << endl;

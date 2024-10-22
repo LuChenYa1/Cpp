@@ -2,17 +2,17 @@
 
 using namespace std;
 
-//* º¯ÊýÄ£°å×÷ÓÃ£º
-//* ½¨Á¢Ò»¸öÍ¨ÓÃº¯Êý£¬Æäº¯Êý·µ»ØÖµÀàÐÍºÍÐÎ²ÎÀàÐÍ¿ÉÒÔ²»¾ßÌåÖÆ¶¨£¬ÓÃÒ»¸ö**ÐéÄâµÄÀàÐÍ**À´´ú±í¡£
-//* Ê¹ÓÃº¯ÊýÄ£°åÓÐÁ½ÖÖ·½Ê½£º×Ô¶¯ÀàÐÍÍÆµ¼¡¢ÏÔÊ¾Ö¸¶¨ÀàÐÍ
-//* µ÷ÓÃÄ£°åº¯ÊýÊ± T ±ØÐëÓÐÈ·¶¨ÇÒÎ¨Ò»µÄÊý¾ÝÀàÐÍ
-//* µ÷ÓÃÊ±Èç¹ûÊ¹ÓÃÏÔÊ¾Ö¸¶¨ÀàÐÍµÄ·½Ê½£¬Ôò¿ÉÒÔ·¢ÉúÒþÊ½ÀàÐÍ×ª»»£¬¼´µ± Func<int>('c')Ê±£¬'c'»á×Ô¶¯×ª»»Îª99
-//* Ä£°åµÄÄ¿µÄÊÇÎªÁËÌá¸ß¸´ÓÃÐÔ£¬½«ÀàÐÍ²ÎÊý»¯
+//* å‡½æ•°æ¨¡æ¿ä½œç”¨ï¼š
+//* å»ºç«‹ä¸€ä¸ªé€šç”¨å‡½æ•°ï¼Œå…¶å‡½æ•°è¿”å›žå€¼ç±»åž‹å’Œå½¢å‚ç±»åž‹å¯ä»¥ä¸å…·ä½“åˆ¶å®šï¼Œç”¨ä¸€ä¸ª**è™šæ‹Ÿçš„ç±»åž‹**æ¥ä»£è¡¨ã€‚
+//* ä½¿ç”¨å‡½æ•°æ¨¡æ¿æœ‰ä¸¤ç§æ–¹å¼ï¼šè‡ªåŠ¨ç±»åž‹æŽ¨å¯¼ã€æ˜¾ç¤ºæŒ‡å®šç±»åž‹
+//* è°ƒç”¨æ¨¡æ¿å‡½æ•°æ—¶ T å¿…é¡»æœ‰ç¡®å®šä¸”å”¯ä¸€çš„æ•°æ®ç±»åž‹
+//* è°ƒç”¨æ—¶å¦‚æžœä½¿ç”¨æ˜¾ç¤ºæŒ‡å®šç±»åž‹çš„æ–¹å¼ï¼Œåˆ™å¯ä»¥å‘ç”Ÿéšå¼ç±»åž‹è½¬æ¢ï¼Œå³å½“ Func<int>('c')æ—¶ï¼Œ'c'ä¼šè‡ªåŠ¨è½¬æ¢ä¸º99
+//* æ¨¡æ¿çš„ç›®çš„æ˜¯ä¸ºäº†æé«˜å¤ç”¨æ€§ï¼Œå°†ç±»åž‹å‚æ•°åŒ–
 
-//Óï·¨£ºtemplate<typename T> // typename ¿ÉÓÃclassÌæ´ú£¬µ«ÈÝÒ×ÓëÀà»ìÏý
-//º¯ÊýÉùÃ÷»ò¶¨Òå
+//è¯­æ³•ï¼štemplate<typename T> // typename å¯ç”¨classæ›¿ä»£ï¼Œä½†å®¹æ˜“ä¸Žç±»æ··æ·†
+//å‡½æ•°å£°æ˜Žæˆ–å®šä¹‰
 
-//½»»»µÄº¯ÊýÄ£°å
+//äº¤æ¢çš„å‡½æ•°æ¨¡æ¿
 template<typename T>
 void mySwap(T &a, T&b)
 {
@@ -21,13 +21,13 @@ void mySwap(T &a, T&b)
 	b = temp;
 }
 
-template<class T> // Ò²¿ÉÒÔÌæ»»³Étypename
-//ÀûÓÃÑ¡ÔñÅÅÐò£¬½øÐÐ¶ÔÊý×é´Ó´óµ½Ð¡µÄÅÅÐò
+template<class T> // ä¹Ÿå¯ä»¥æ›¿æ¢æˆtypename
+//åˆ©ç”¨é€‰æ‹©æŽ’åºï¼Œè¿›è¡Œå¯¹æ•°ç»„ä»Žå¤§åˆ°å°çš„æŽ’åº
 void mySort(T arr[], int len)
 {
 	for (int i = 0; i < len; i++)
 	{
-		int max = i; //×î´óÊýµÄÏÂ±ê
+		int max = i; //æœ€å¤§æ•°çš„ä¸‹æ ‡
 		for (int j = i + 1; j < len; j++)
 		{
 			if (arr[max] < arr[j])
@@ -35,7 +35,7 @@ void mySort(T arr[], int len)
 				max = j;
 			}
 		}
-		if (max != i) //Èç¹û×î´óÊýµÄÏÂ±ê²»ÊÇi£¬½»»»Á½Õß
+		if (max != i) //å¦‚æžœæœ€å¤§æ•°çš„ä¸‹æ ‡ä¸æ˜¯iï¼Œäº¤æ¢ä¸¤è€…
 		{
 			mySwap(arr[max], arr[i]);
 		}
@@ -52,7 +52,7 @@ void printArray(T arr[], int len)
 
 void test01()
 {
-	//²âÊÔcharÊý×é
+	//æµ‹è¯•charæ•°ç»„
 	char charArr[] = "bdcfeagh";
 	int num = sizeof(charArr) / sizeof(char);
 	mySort(charArr, num);
@@ -61,7 +61,7 @@ void test01()
 
 void test02()
 {
-	//²âÊÔintÊý×é
+	//æµ‹è¯•intæ•°ç»„
 	int intArr[] = { 7, 5, 8, 1, 3, 9, 2, 4, 6 };
 	int num = sizeof(intArr) / sizeof(int);
 	mySort(intArr, num);

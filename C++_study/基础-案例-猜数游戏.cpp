@@ -11,32 +11,32 @@ int main(void)
 	string repeat;
 	srand((unsigned int)time(NULL));
 	num = rand() % 100 + 1;
-	cout << "²ÂÊıÓÎÏ·:·¶Î§0 < num <= 100" << endl;
-	cout << "ÊÇ·ñ½øÈëÓÎÏ·?yes or no" << endl;
+	cout << "çŒœæ•°æ¸¸æˆ:èŒƒå›´0 < num <= 100" << endl;
+	cout << "æ˜¯å¦è¿›å…¥æ¸¸æˆ?yes or no" << endl;
 	cin >> repeat;
-	if (repeat == "no")cout << "ÆÚ´ıÏÂ´ÎÏàÓö" << endl;
+	if (repeat == "no")cout << "æœŸå¾…ä¸‹æ¬¡ç›¸é‡" << endl;
 
 	while (repeat == "yes")
 	{
-		cout << "ÇëÊäÈëÄú²ÂµÄÊı×Ö" << endl;
+		cout << "è¯·è¾“å…¥æ‚¨çŒœçš„æ•°å­—" << endl;
 		cin >> guessnum;
 		if (guessnum > num)
 		{
-			cout << "´óÁË" << endl;
+			cout << "å¤§äº†" << endl;
 		}
 		else if (guessnum < num)
 		{
-			cout << "Ğ¡ÁË" << endl;
+			cout << "å°äº†" << endl;
 		}
 		else
 		{
-			cout << "ÕıÈ·£¡" << endl;
-			cout << "ÊÇ·ñ¼ÌĞøÓÎÍæ£¿" << endl;
+			cout << "æ­£ç¡®ï¼" << endl;
+			cout << "æ˜¯å¦ç»§ç»­æ¸¸ç©ï¼Ÿ" << endl;
 			cin >> repeat;
 			if (repeat == "yes")num = rand() % 100 + 1;
 			else if (repeat == "no")
 			{
-				cout << "»¶Ó­ÏÂ´ÎÓÎÍæ±¾ÓÎÏ·" << endl;
+				cout << "æ¬¢è¿ä¸‹æ¬¡æ¸¸ç©æœ¬æ¸¸æˆ" << endl;
 				break;
 			}
 		}

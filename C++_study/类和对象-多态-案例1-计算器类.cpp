@@ -2,10 +2,10 @@
 
 using namespace std;
 
-//* ¶àÌ¬ÓÅµã£º´úÂë×éÖ¯½á¹¹ÇåÎú£¬¿É¶ÁĞÔÇ¿£¬ÀûÓÚÇ°ÆÚºÍºóÆÚµÄÀ©Õ¹ÒÔ¼°Î¬»¤
-//* Êµ¼Ê¿ª·¢Ìá³«¿ª±ÕÔ­Ôò£º¶ÔÀ©Õ¹½øĞĞ¿ª·Å£¬¶ÔĞŞ¸Ä½øĞĞ¹Ø±Õ£¬¼´Ö»Ôö²»¸Ä
+//* å¤šæ€ä¼˜ç‚¹ï¼šä»£ç ç»„ç»‡ç»“æ„æ¸…æ™°ï¼Œå¯è¯»æ€§å¼ºï¼Œåˆ©äºå‰æœŸå’ŒåæœŸçš„æ‰©å±•ä»¥åŠç»´æŠ¤
+//* å®é™…å¼€å‘æå€¡å¼€é—­åŸåˆ™ï¼šå¯¹æ‰©å±•è¿›è¡Œå¼€æ”¾ï¼Œå¯¹ä¿®æ”¹è¿›è¡Œå…³é—­ï¼Œå³åªå¢ä¸æ”¹
 
-//ÆÕÍ¨ÊµÏÖ
+//æ™®é€šå®ç°
 class Calculator {
 public:
 	int getResult(string oper)
@@ -23,7 +23,7 @@ public:
 			return m_Num1 * m_Num2;
 		}
         return -1;
-		//! Èç¹ûÒªÌá¹©ĞÂµÄÔËËã£¬ĞèÒªĞŞ¸ÄÔ´Âë,Êµ¼Ê¿ª·¢²»½¨ÒéÕâÃ´×ö
+		//! å¦‚æœè¦æä¾›æ–°çš„è¿ç®—ï¼Œéœ€è¦ä¿®æ”¹æºç ,å®é™…å¼€å‘ä¸å»ºè®®è¿™ä¹ˆåš
 	}
 public:
 	int m_Num1;
@@ -32,7 +32,7 @@ public:
 
 void test01()
 {
-	//ÆÕÍ¨ÊµÏÖ²âÊÔ
+	//æ™®é€šå®ç°æµ‹è¯•
 	Calculator c;
 	c.m_Num1 = 10;
 	c.m_Num2 = 10;
@@ -42,8 +42,8 @@ void test01()
 }
 
 
-//* ¶àÌ¬ÊµÏÖ
-//* ³éÏó¼ÆËãÆ÷Àà
+//* å¤šæ€å®ç°
+//* æŠ½è±¡è®¡ç®—å™¨ç±»
 class AbstractCalculator
 {
 public :
@@ -53,7 +53,7 @@ public :
 	int m_Num2;
 };
 
-//* ¼Ó·¨¼ÆËãÆ÷
+//* åŠ æ³•è®¡ç®—å™¨
 class AddCalculator :public AbstractCalculator
 {
 public:
@@ -63,7 +63,7 @@ public:
 	}
 };
 
-//* ¼õ·¨¼ÆËãÆ÷
+//* å‡æ³•è®¡ç®—å™¨
 class SubCalculator :public AbstractCalculator
 {
 public:
@@ -73,7 +73,7 @@ public:
 	}
 };
 
-//* ³Ë·¨¼ÆËãÆ÷
+//* ä¹˜æ³•è®¡ç®—å™¨
 class MulCalculator :public AbstractCalculator
 {
 public:
@@ -86,21 +86,21 @@ public:
 
 void test02()
 {
-	//´´½¨¼Ó·¨¼ÆËãÆ÷
+	//åˆ›å»ºåŠ æ³•è®¡ç®—å™¨
 	AbstractCalculator *abc = new AddCalculator;
 	abc->m_Num1 = 10;
 	abc->m_Num2 = 10;
 	cout << abc->m_Num1 << " + " << abc->m_Num2 << " = " << abc->getResult() << endl;
-	delete abc;  //ÓÃÍêÁË¼ÇµÃÏú»Ù
+	delete abc;  //ç”¨å®Œäº†è®°å¾—é”€æ¯
 
-	//´´½¨¼õ·¨¼ÆËãÆ÷
+	//åˆ›å»ºå‡æ³•è®¡ç®—å™¨
 	abc = new SubCalculator;
 	abc->m_Num1 = 10;
 	abc->m_Num2 = 10;
 	cout << abc->m_Num1 << " - " << abc->m_Num2 << " = " << abc->getResult() << endl;
 	delete abc;  
 
-	//´´½¨³Ë·¨¼ÆËãÆ÷
+	//åˆ›å»ºä¹˜æ³•è®¡ç®—å™¨
 	abc = new MulCalculator;
 	abc->m_Num1 = 10;
 	abc->m_Num2 = 10;

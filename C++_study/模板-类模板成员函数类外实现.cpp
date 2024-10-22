@@ -3,12 +3,12 @@
 
 using namespace std;
 
-//ÀàÄ£°åÖĞ³ÉÔ±º¯ÊıÀàÍâÊµÏÖ
+//ç±»æ¨¡æ¿ä¸­æˆå‘˜å‡½æ•°ç±»å¤–å®ç°
 template<class T1, class T2>
 class Person 
 {
 public:
-	//³ÉÔ±º¯ÊıÀàÄÚÉùÃ÷
+	//æˆå‘˜å‡½æ•°ç±»å†…å£°æ˜
 	Person(T1 name, T2 age);
 	void showPerson();
 
@@ -17,7 +17,7 @@ public:
 	T2 m_Age;
 };
 
-//* ¹¹Ôìº¯Êı ÀàÍâÊµÏÖ
+//* æ„é€ å‡½æ•° ç±»å¤–å®ç°
 template<class T1, class T2>
 Person<T1, T2>::Person(T1 name, T2 age) 
 {
@@ -25,11 +25,11 @@ Person<T1, T2>::Person(T1 name, T2 age)
 	this->m_Age = age;
 }
 
-//³ÉÔ±º¯Êı ÀàÍâÊµÏÖ
+//æˆå‘˜å‡½æ•° ç±»å¤–å®ç°
 template<class T1, class T2>
 void Person<T1, T2>::showPerson() 
 {
-	cout << "ĞÕÃû: " << this->m_Name << " ÄêÁä:" << this->m_Age << endl;
+	cout << "å§“å: " << this->m_Name << " å¹´é¾„:" << this->m_Age << endl;
 }
 
 int main() 

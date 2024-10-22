@@ -2,9 +2,9 @@
 
 using namespace std;
 
-//* Ŀǰ�׶��ò���ռλ����
-//! ռλ����Ҳ������Ĭ��ֵ
-//! ���ú���ʱ�������ռλ����дֵ�����û��Ĭ��ֵ��
+//* 目前阶段用不到占位参数
+//! 占位参数也可以有默认值
+//! 调用函数时，必须给占位参数写值（如果没有默认值）
 
 void Func(int a, int)
 // void Func(int a, double b, double)

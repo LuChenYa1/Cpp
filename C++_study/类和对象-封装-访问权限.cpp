@@ -2,16 +2,16 @@
 
 using namespace std;
 
-//! ·ÃÎÊÈ¨ÏÞÓÐÈýÖÖ£º(Ä¬ÈÏË½ÓÐÈ¨ÏÞ)
-//* 1. public    ¹«¹²È¨ÏÞ  ÀàÄÚ¿ÉÒÔ·ÃÎÊ£¬ÀàÍâ¿ÉÒÔ·ÃÎÊ
-//* 2. protected ±£»¤È¨ÏÞ  ÀàÄÚ¿ÉÒÔ·ÃÎÊ£¬ÀàÍâ²»¿ÉÒÔ·ÃÎÊ
-//* 3. private   Ë½ÓÐÈ¨ÏÞ  ÀàÄÚ¿ÉÒÔ·ÃÎÊ£¬ÀàÍâ²»¿ÉÒÔ·ÃÎÊ ¶ù×Ó²»¿ÉÒÔ·ÃÎÊ¸¸Ç×£¨¼Ì³Ð£©
+//! è®¿é—®æƒé™æœ‰ä¸‰ç§ï¼š(é»˜è®¤ç§æœ‰æƒé™)
+//* 1. public    å…¬å…±æƒé™  ç±»å†…å¯ä»¥è®¿é—®ï¼Œç±»å¤–å¯ä»¥è®¿é—®
+//* 2. protected ä¿æŠ¤æƒé™  ç±»å†…å¯ä»¥è®¿é—®ï¼Œç±»å¤–ä¸å¯ä»¥è®¿é—®
+//* 3. private   ç§æœ‰æƒé™  ç±»å†…å¯ä»¥è®¿é—®ï¼Œç±»å¤–ä¸å¯ä»¥è®¿é—® å„¿å­ä¸å¯ä»¥è®¿é—®çˆ¶äº²ï¼ˆç»§æ‰¿ï¼‰
 
-//* struct ºÍ class ºÜÏñ£¬µ«struct ²»ÄÜÓÐ³ÉÔ±·½·¨£¬ÇÒÄ¬ÈÏ¹«¹²È¨ÏÞ
+//* struct å’Œ class å¾ˆåƒï¼Œä½†struct ä¸èƒ½æœ‰æˆå‘˜æ–¹æ³•ï¼Œä¸”é»˜è®¤å…¬å…±æƒé™
 
-//! ÈçºÎÉèÖÃ¶ÁÐ´È¨ÏÞ£¿
-//* 1¡¢½«ÊôÐÔÉèÖÃÎªË½ÓÐ/±£»¤
-//* 2¡¢ÀûÓÃÐÐÎª·ÃÎÊÊôÐÔ£¬¸ù¾ÝÐèÇó½øÐÐ¶ÁÐ´
+//! å¦‚ä½•è®¾ç½®è¯»å†™æƒé™ï¼Ÿ
+//* 1ã€å°†å±žæ€§è®¾ç½®ä¸ºç§æœ‰/ä¿æŠ¤
+//* 2ã€åˆ©ç”¨è¡Œä¸ºè®¿é—®å±žæ€§ï¼Œæ ¹æ®éœ€æ±‚è¿›è¡Œè¯»å†™
 
 class Test
 {
@@ -29,7 +29,7 @@ public:
     {
         if(S_Age < 0 || S_Age > 150)
         {
-            cout << "ÄêÁäÉèÖÃ²»ºÏÀí£¬ÇëÖØÐÂÉèÖÃ" << endl;
+            cout << "å¹´é¾„è®¾ç½®ä¸åˆç†ï¼Œè¯·é‡æ–°è®¾ç½®" << endl;
             return;
         }
         Age = S_Age;
@@ -43,8 +43,8 @@ public:
         Height = S_Height;
     }
 
-    //* Ê¹ÓÃ³ÉÔ±º¯ÊýÅÐ¶ÏÁ½¶ÔÏóµÄÉí¸ßÊôÐÔÊÇ·ñÏàµÈ
-    bool isSameHeightByClass(Person C)//Ò²¿ÉÒÔÒýÓÃ£¬²»¹ýÃ»±ØÒª
+    //* ä½¿ç”¨æˆå‘˜å‡½æ•°åˆ¤æ–­ä¸¤å¯¹è±¡çš„èº«é«˜å±žæ€§æ˜¯å¦ç›¸ç­‰
+    bool isSameHeightByClass(Person C)//ä¹Ÿå¯ä»¥å¼•ç”¨ï¼Œä¸è¿‡æ²¡å¿…è¦
     {
         if(Height == C.ReadHeight())
             return true;
@@ -52,13 +52,13 @@ public:
     }
 
 private:
-    string Name;//Ö»¶Á
-    int Age;//Ö»Ð´
-    double Height;//¿É¶Á¿ÉÐ´
+    string Name;//åªè¯»
+    int Age;//åªå†™
+    double Height;//å¯è¯»å¯å†™
 };
 
-//* Ê¹ÓÃÈ«¾Öº¯ÊýÅÐ¶ÏÁ½¶ÔÏóµÄÉí¸ßÊôÐÔÊÇ·ñÏàµÈ 
-bool isSameHeight(Person C1, Person C2)//Ò²¿ÉÒÔÒýÓÃ£¬²»¹ýÃ»±ØÒª
+//* ä½¿ç”¨å…¨å±€å‡½æ•°åˆ¤æ–­ä¸¤å¯¹è±¡çš„èº«é«˜å±žæ€§æ˜¯å¦ç›¸ç­‰ 
+bool isSameHeight(Person C1, Person C2)//ä¹Ÿå¯ä»¥å¼•ç”¨ï¼Œä¸è¿‡æ²¡å¿…è¦
 {
     if(C1.ReadHeight() == C2.ReadHeight())
         return true;
@@ -67,23 +67,23 @@ bool isSameHeight(Person C1, Person C2)//Ò²¿ÉÒÔÒýÓÃ£¬²»¹ýÃ»±ØÒª
 
 int main(void)
 {
-    //Ä¬ÈÏË½ÓÐÈ¨ÏÞ£¬³ÉÔ±²»¿É·ÃÎÊ
+    //é»˜è®¤ç§æœ‰æƒé™ï¼Œæˆå‘˜ä¸å¯è®¿é—®
     // Test T1;
     // T1.a = 1;
 
     Person P1;
-    cout << "ÐÕÃû£º" <<  P1.ReadName() << endl;
+    cout << "å§“åï¼š" <<  P1.ReadName() << endl;
     P1.SetAge(151);
     P1.SetHeight(157);
-    cout << "Éí¸ß£º" <<  P1.ReadHeight() << endl;
+    cout << "èº«é«˜ï¼š" <<  P1.ReadHeight() << endl;
 
     Person P2;
     P2.SetHeight(156);
     // bool ret = isSameHeight(P1, P2);
     bool ret = P1.isSameHeightByClass(P2);
     if(ret == true)
-        cout << "Éí¸ßÒ»Ñù" << endl;
+        cout << "èº«é«˜ä¸€æ ·" << endl;
     else
-        cout << "Éí¸ß²»Ò»Ñù" << endl;
+        cout << "èº«é«˜ä¸ä¸€æ ·" << endl;
     return 0;
 }

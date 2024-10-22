@@ -2,8 +2,8 @@
 
 using namespace std;
 
-//* ostream : Êä³öÁ÷
-//* ostream ¶ÔÏóÖ»ÄÜÓĞÒ»¸ö£¬¼´cout
+//* ostream : è¾“å‡ºæµ
+//* ostream å¯¹è±¡åªèƒ½æœ‰ä¸€ä¸ªï¼Œå³cout
 
 class Person
 {
@@ -17,12 +17,12 @@ public:
 private:
     int A;
     int B;
-    //! ³ÉÔ±º¯Êı²»ÄÜÖØÔØ <<  
-    //* Ô­Òò£ºµ÷ÓÃÊ± p.operator << (cout)£¨»òÕßp1£©£¬¼ò»¯ºóÎª p << cout£¨p1£©£¬ÏÔÈ»²»¶Ô
+    //! æˆå‘˜å‡½æ•°ä¸èƒ½é‡è½½ <<  
+    //* åŸå› ï¼šè°ƒç”¨æ—¶ p.operator << (cout)ï¼ˆæˆ–è€…p1ï¼‰ï¼Œç®€åŒ–åä¸º p << coutï¼ˆp1ï¼‰ï¼Œæ˜¾ç„¶ä¸å¯¹
 };
 
-//* ÊµÏÖ cout << p £¬´òÓ¡¶ÔÏóp µÄËùÓĞ³ÉÔ±ÊôĞÔ
-ostream & operator<< (ostream &out, Person &p)//* ×¢ÒâÒ»¶¨ÒªÒıÓÃ£¬·ñÔòÖØÔØµÄ²»ÊÇ cout ±¾Éí, ÇÒcout Ö»ÄÜÓĞÒ»¸ö
+//* å®ç° cout << p ï¼Œæ‰“å°å¯¹è±¡p çš„æ‰€æœ‰æˆå‘˜å±æ€§
+ostream & operator<< (ostream &out, Person &p)//* æ³¨æ„ä¸€å®šè¦å¼•ç”¨ï¼Œå¦åˆ™é‡è½½çš„ä¸æ˜¯ cout æœ¬èº«, ä¸”cout åªèƒ½æœ‰ä¸€ä¸ª
 {
     out << "A = " << p.A << "," << "B = " << p.B;
     return out;
@@ -32,7 +32,7 @@ int main()
 {
     Person p1;
     
-    cout << p1 << endl;//* Á´Ê½±à³Ì
+    cout << p1 << endl;//* é“¾å¼ç¼–ç¨‹
     cout << "..." << endl;
 
     return 0;

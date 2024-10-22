@@ -2,22 +2,22 @@
 #include <iostream>
 using namespace std;
 
-//* °¸ÀýÃèÊö:  ÊµÏÖÒ»¸öÍ¨ÓÃµÄÊý×éÀà£¬ÒªÇóÈçÏÂ£º
+//* æ¡ˆä¾‹æè¿°:  å®žçŽ°ä¸€ä¸ªé€šç”¨çš„æ•°ç»„ç±»ï¼Œè¦æ±‚å¦‚ä¸‹ï¼š
 
-// * ¿ÉÒÔ¶ÔÄÚÖÃÊý¾ÝÀàÐÍÒÔ¼°×Ô¶¨ÒåÊý¾ÝÀàÐÍµÄÊý¾Ý½øÐÐ´æ´¢`
-// * ½«Êý×éÖÐµÄÊý¾Ý´æ´¢µ½¶ÑÇø
-// * ¹¹Ôìº¯ÊýÖÐ¿ÉÒÔ´«ÈëÊý×éµÄÈÝÁ¿
-// * Ìá¹©¶ÔÓ¦µÄ¿½±´¹¹Ôìº¯ÊýÒÔ¼°operator=·ÀÖ¹Ç³¿½±´ÎÊÌâ
-// * ¿ÉÒÔ¶ÔÊý×éÖÐµÄÊý¾Ý½øÐÐÔö¼ÓºÍÉ¾³ý
-// * ¿ÉÒÔÍ¨¹ýÏÂ±êµÄ·½Ê½·ÃÎÊÊý×éÖÐµÄÔªËØ
-// * ¿ÉÒÔ»ñÈ¡Êý×éÖÐµ±Ç°ÔªËØ¸öÊýºÍÊý×éµÄÈÝÁ¿
+// * å¯ä»¥å¯¹å†…ç½®æ•°æ®ç±»åž‹ä»¥åŠè‡ªå®šä¹‰æ•°æ®ç±»åž‹çš„æ•°æ®è¿›è¡Œå­˜å‚¨`
+// * å°†æ•°ç»„ä¸­çš„æ•°æ®å­˜å‚¨åˆ°å †åŒº
+// * æž„é€ å‡½æ•°ä¸­å¯ä»¥ä¼ å…¥æ•°ç»„çš„å®¹é‡
+// * æä¾›å¯¹åº”çš„æ‹·è´æž„é€ å‡½æ•°ä»¥åŠoperator=é˜²æ­¢æµ…æ‹·è´é—®é¢˜
+// * å¯ä»¥å¯¹æ•°ç»„ä¸­çš„æ•°æ®è¿›è¡Œå¢žåŠ å’Œåˆ é™¤
+// * å¯ä»¥é€šè¿‡ä¸‹æ ‡çš„æ–¹å¼è®¿é—®æ•°ç»„ä¸­çš„å…ƒç´ 
+// * å¯ä»¥èŽ·å–æ•°ç»„ä¸­å½“å‰å…ƒç´ ä¸ªæ•°å’Œæ•°ç»„çš„å®¹é‡
 
 template<typename T>
 class MyArray
 {
 public:
     
-	//ÓÐ²Î¹¹Ôìº¯Êý
+	//æœ‰å‚æž„é€ å‡½æ•°
 	MyArray(int capacity)
 	{
 		this->m_Capacity = capacity;
@@ -25,7 +25,7 @@ public:
 		pAddress = new T[this->m_Capacity];
 	}
 
-	//¿½±´¹¹Ôì
+	//æ‹·è´æž„é€ 
 	MyArray(const MyArray & arr)
 	{
 		this->m_Capacity = arr.m_Capacity;
@@ -33,14 +33,14 @@ public:
 		this->pAddress = new T[this->m_Capacity];
 		for (int i = 0; i < this->m_Size; i++)
 		{
-			//Èç¹ûTÎª¶ÔÏó£¬¶øÇÒ»¹°üº¬Ö¸Õë£¬±ØÐëÐèÒªÖØÔØ = ²Ù×÷·û£¬ÒòÎªÕâ¸öµÈºÅ²»ÊÇ ¹¹Ôì ¶øÊÇ¸³Öµ
-            //±àÒëÆ÷²»Ö§³ÖÒ»¸ö¶ÔÏó¸³Öµ¸øÁíÍâÒ»¸ö¶ÔÏóµÄÐ´·¨£¬Ö»ÄÜÖØÔØÔËËã·û'='
-			// ×¢Òâ£ºpAddress[i]Èç¹ûÊÇÆÕÍ¨ÀàÐÍ¾Í¿ÉÒÔÖ±½Ó= µ«Èç¹ûÊÇÖ¸ÕëÀàÐÍÔòÐèÒªÉî¿½±´£¬²»ÄÜÖ±½Ó¸³Öµµ¼ÖÂÖ¸ÏòÍ¬Ò»¿é¿Õ¼ä
+			//å¦‚æžœTä¸ºå¯¹è±¡ï¼Œè€Œä¸”è¿˜åŒ…å«æŒ‡é’ˆï¼Œå¿…é¡»éœ€è¦é‡è½½ = æ“ä½œç¬¦ï¼Œå› ä¸ºè¿™ä¸ªç­‰å·ä¸æ˜¯ æž„é€  è€Œæ˜¯èµ‹å€¼
+            //ç¼–è¯‘å™¨ä¸æ”¯æŒä¸€ä¸ªå¯¹è±¡èµ‹å€¼ç»™å¦å¤–ä¸€ä¸ªå¯¹è±¡çš„å†™æ³•ï¼Œåªèƒ½é‡è½½è¿ç®—ç¬¦'='
+			// æ³¨æ„ï¼špAddress[i]å¦‚æžœæ˜¯æ™®é€šç±»åž‹å°±å¯ä»¥ç›´æŽ¥= ä½†å¦‚æžœæ˜¯æŒ‡é’ˆç±»åž‹åˆ™éœ€è¦æ·±æ‹·è´ï¼Œä¸èƒ½ç›´æŽ¥èµ‹å€¼å¯¼è‡´æŒ‡å‘åŒä¸€å—ç©ºé—´
 			this->pAddress[i] = arr.pAddress[i];
 		}
 	}
 
-	//ÖØÔØ = ²Ù×÷·û  ·ÀÖ¹Ç³¿½±´ÎÊÌâ
+	//é‡è½½ = æ“ä½œç¬¦  é˜²æ­¢æµ…æ‹·è´é—®é¢˜
 	MyArray& operator=(const MyArray& myarray) 
     {
 		if (this->pAddress != NULL) 
@@ -58,13 +58,13 @@ public:
 		return *this;
 	}
 
-	//ÖØÔØ[] ²Ù×÷·û  arr[0]
+	//é‡è½½[] æ“ä½œç¬¦  arr[0]
 	T& operator [](int index)
 	{
-		return this->pAddress[index]; //²»¿¼ÂÇÔ½½ç£¬ÓÃ»§×Ô¼ºÈ¥´¦Àí
+		return this->pAddress[index]; //ä¸è€ƒè™‘è¶Šç•Œï¼Œç”¨æˆ·è‡ªå·±åŽ»å¤„ç†
 	}
 
-	//Î²Ôö¼Ó
+	//å°¾å¢žåŠ 
 	void Push_Back(const T & val)
 	{
 		if (this->m_Capacity == this->m_Size)
@@ -75,7 +75,7 @@ public:
 		this->m_Size++;
 	}
 
-	//Î²É¾³ý
+	//å°¾åˆ é™¤
 	void Pop_Back()
 	{
 		if (this->m_Size == 0)
@@ -85,25 +85,25 @@ public:
 		this->m_Size--;
 	}
 
-	//»ñÈ¡Êý×éÈÝÁ¿
+	//èŽ·å–æ•°ç»„å®¹é‡
 	int getCapacity()
 	{
 		return this->m_Capacity;
 	}
 
-	//»ñÈ¡Êý×éÊµ¼ÊÊýÁ¿
+	//èŽ·å–æ•°ç»„å®žé™…æ•°é‡
 	int	getSize()
 	{
 		return this->m_Size;
 	}
 
-	//Îö¹¹
+	//æžæž„
 	~MyArray()
 	{
 		if (this->pAddress != NULL)
 		{
 			delete[] this->pAddress;
-            //ÏÂÃæµÄ¿ÉÐ´¿É²»Ð´
+            //ä¸‹é¢çš„å¯å†™å¯ä¸å†™
 			this->pAddress = NULL;
 			this->m_Capacity = 0;
 			this->m_Size = 0;
@@ -111,7 +111,7 @@ public:
 	}
 
 private:
-	T * pAddress;  //Ö¸ÏòÒ»¸ö¶Ñ¿Õ¼ä£¬Õâ¸ö¿Õ¼ä´æ´¢ÕæÕýµÄÊý¾Ý-Êý×é
-	int m_Capacity; //ÈÝÁ¿
-	int m_Size;   // Êµ¼ÊÊýÁ¿
+	T * pAddress;  //æŒ‡å‘ä¸€ä¸ªå †ç©ºé—´ï¼Œè¿™ä¸ªç©ºé—´å­˜å‚¨çœŸæ­£çš„æ•°æ®-æ•°ç»„
+	int m_Capacity; //å®¹é‡
+	int m_Size;   // å®žé™…æ•°é‡
 };

@@ -2,7 +2,7 @@
 
 using namespace std;
 
-//* Ö»ÒªÊÇÔÚÄ£°åÀàÉùÃ÷Íâ³öÏÖÕâ¸öÄ£°åÀà£¬¶¼ÈÏÎªÊÇµ÷ÓÃÕâ¸öÄ£°åÀà£¬°üÀ¨×ÓÀà¼Ì³Ð¸¸ÀàµÄÇé¿ö
+//* åªè¦æ˜¯åœ¨æ¨¡æ¿ç±»å£°æ˜Žå¤–å‡ºçŽ°è¿™ä¸ªæ¨¡æ¿ç±»ï¼Œéƒ½è®¤ä¸ºæ˜¯è°ƒç”¨è¿™ä¸ªæ¨¡æ¿ç±»ï¼ŒåŒ…æ‹¬å­ç±»ç»§æ‰¿çˆ¶ç±»çš„æƒ…å†µ
 
 template<typename T>
 class Base
@@ -10,16 +10,16 @@ class Base
 	T m;
 };
 
-//* µ±×ÓÀà¼Ì³ÐµÄ¸¸ÀàÊÇÒ»¸öÀàÄ£°åÊ±£¬×ÓÀàÔÚÉùÃ÷µÄÊ±ºò£¬ÒªÖ¸¶¨¸¸ÀàÖÐTµÄÀàÐÍ
-//class Son:public Base  //´íÎó£¬c++±àÒëÐèÒª¸ø×ÓÀà·ÖÅäÄÚ´æ£¬±ØÐëÖªµÀ¸¸ÀàÖÐTµÄÀàÐÍ²Å¿ÉÒÔÏòÏÂ¼Ì³Ð
-class Son :public Base<int> //±ØÐëÖ¸¶¨Ò»¸öÀàÐÍ
+//* å½“å­ç±»ç»§æ‰¿çš„çˆ¶ç±»æ˜¯ä¸€ä¸ªç±»æ¨¡æ¿æ—¶ï¼Œå­ç±»åœ¨å£°æ˜Žçš„æ—¶å€™ï¼Œè¦æŒ‡å®šçˆ¶ç±»ä¸­Tçš„ç±»åž‹
+//class Son:public Base  //é”™è¯¯ï¼Œc++ç¼–è¯‘éœ€è¦ç»™å­ç±»åˆ†é…å†…å­˜ï¼Œå¿…é¡»çŸ¥é“çˆ¶ç±»ä¸­Tçš„ç±»åž‹æ‰å¯ä»¥å‘ä¸‹ç»§æ‰¿
+class Son :public Base<int> //å¿…é¡»æŒ‡å®šä¸€ä¸ªç±»åž‹
 {
 };
 
-//* Èç¹ûÏëÁé»îÖ¸¶¨³ö¸¸ÀàÖÐTµÄÀàÐÍ£¬×ÓÀàÒ²Ðè±äÎªÀàÄ£°å
-//* ÀàÄ£°å¼Ì³ÐÀàÄ£°å ,¿ÉÒÔÓÃT2Ö¸¶¨¸¸ÀàÖÐµÄTÀàÐÍ
+//* å¦‚æžœæƒ³çµæ´»æŒ‡å®šå‡ºçˆ¶ç±»ä¸­Tçš„ç±»åž‹ï¼Œå­ç±»ä¹Ÿéœ€å˜ä¸ºç±»æ¨¡æ¿
+//* ç±»æ¨¡æ¿ç»§æ‰¿ç±»æ¨¡æ¿ ,å¯ä»¥ç”¨T2æŒ‡å®šçˆ¶ç±»ä¸­çš„Tç±»åž‹
 template<typename T2>
-//¸¸ÀàÊÇÄ£°åÀà£¬Æä±»×ÓÀàµ÷ÓÃ£¬Ðè×ñÑ­µ÷ÓÃÄ£°åÀà¹æÔò£¬¼´Ö¸¶¨¸¸ÀàÖÐ´æÔÚµÄ·ºÐÍµÄÀàÐÍ
+//çˆ¶ç±»æ˜¯æ¨¡æ¿ç±»ï¼Œå…¶è¢«å­ç±»è°ƒç”¨ï¼Œéœ€éµå¾ªè°ƒç”¨æ¨¡æ¿ç±»è§„åˆ™ï¼Œå³æŒ‡å®šçˆ¶ç±»ä¸­å­˜åœ¨çš„æ³›åž‹çš„ç±»åž‹
 class Son2 :public Base<T2>
 {
 public:
