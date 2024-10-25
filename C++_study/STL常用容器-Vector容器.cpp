@@ -11,6 +11,8 @@ void printVector(vector<int> &v)
 	cout << endl;
 }
 
+//  vector 或数组的迭代器属于随机访问迭代器（Random Access Iterator），它们支持所有的指针运算符，包括随机访问和指针算术
+
 //* 四种构造方式
 void test01()
 {
