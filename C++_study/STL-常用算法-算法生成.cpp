@@ -30,8 +30,9 @@ void test02()
 {
 	vector<int> v;
 	v.resize(10);
+	v.push_back(222);
 	//填充
-	fill(v.begin(), v.end(), 100);
+	fill(v.begin(), v.end(), 100);//全部赋值
 
 	for_each(v.begin(), v.end(), myPrint());
 	cout << endl;
