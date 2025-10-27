@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "Debug.exe"
+			"path" : "DeBug.exe"
 		},
 		{
-			"path" : "Debug.pdb"
+			"path" : "DeBug.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -13,7 +13,8 @@
 	{
 		"commands" : 
 		[
-			"add_executable"
+			"add_executable",
+			"include_directories"
 		],
 		"files" : 
 		[
@@ -27,7 +28,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 5,
+				"line" : 31,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 29,
 				"parent" : 0
 			}
 		]
@@ -41,14 +48,23 @@
 					"fragment" : "-g"
 				}
 			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 2,
+					"path" : "D:/A_Project/C++/Code/C++_study/Multi_Func"
+				}
+			],
 			"language" : "CXX",
 			"sourceIndexes" : 
 			[
-				0
+				0,
+				1,
+				2
 			]
 		}
 	],
-	"id" : "Debug::@6890427a1f51a3e7e1df",
+	"id" : "DeBug::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -68,8 +84,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "Debug",
-	"nameOnDisk" : "Debug.exe",
+	"name" : "DeBug",
+	"nameOnDisk" : "DeBug.exe",
 	"paths" : 
 	{
 		"build" : ".",
@@ -81,7 +97,9 @@
 			"name" : "Source Files",
 			"sourceIndexes" : 
 			[
-				0
+				0,
+				1,
+				2
 			]
 		}
 	],
@@ -90,7 +108,19 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "CompProcessManageSystem.cpp",
+			"path" : "DeBug.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Multi_Func/Circle.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Multi_Func/Point.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

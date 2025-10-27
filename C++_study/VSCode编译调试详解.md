@@ -22,48 +22,75 @@ g++：是 GCC 的一部分，专门用于编译 C++ 程序。它支持 C++ 语�
 
 简而言之，gcc 用于编译 C 语言程序，而 g++ 用于编译 C++ 程序。尽管 g++ 可以编译 C 语言代码（因为它兼容 C 的语法），但最好还是使用 gcc 来编译 C 代码，以避免不必要的混淆和潜在的问题。对于 C++ 代码，应该使用 g++，因为它提供了对 C++ 特性的完整支持。
 
-## 命令行操作
+### g++ 命令行操作
 
-### 第一步编译：g++ .\九九乘法表.cpp    /mingw32-make.exe(使用cmake编译生成可执行文件的命令)
-  
-这个命令会经历以下步骤：
+1、g++ .\基础-案例-九九乘法表.cpp    /mingw32-make.exe(使用cmake编译生成可执行文件的命令)
+    这个命令会经历以下步骤：
+    编译：g++ 编译器会将 基础-案例-九九乘法表.cpp 文件中的人类可读的 C++ 代码转换成机器代码。
+    链接：编译器还会链接该程序可能依赖的任何库，以生成一个完整的可执行文件。
+    生成可执行文件：如果编译和链接过程没有错误，g++ 会生成一个可执行文件（在 Windows 上可能会是 九九乘法表.exe）。
+    如果想要指定生成的可执行文件的名称，可以使用 -o 选项: g++ .\九九乘法表.cpp -o 九九乘法表.exe
 
-编译：g++ 编译器会将 九九乘法表.cpp 文件中的人类可读的 C++ 代码转换成机器代码。
+2、.\基础-案例-九九乘法表.exe   /  .\九九乘法表
+    如果编译成功，可以通过在命令行中输入生成的可执行文件的名称来运行程序
 
-链接：编译器还会链接该程序可能依赖的任何库，以生成一个完整的可执行文件。
+3、输出调试：g++ -g .\基础-案例-九九乘法表.cpp -o MyDeBugTest
+    和第一步过程一样，但输出的可执行文件带了调试信息，并且指定了名称
 
-生成可执行文件：如果编译和链接过程没有错误，g++ 会生成一个可执行文件（在 Windows 上可能会是 九九乘法表.exe）。
-如果想要指定生成的可执行文件的名称，可以使用 -o 选项: g++ .\九九乘法表.cpp -o 九九乘法表.exe
+### 使用 g++ 编译多文件项目
 
-### 第二步执行：.\九九乘法表.exe   /  .\九九乘法表
-
-如果编译成功，可以通过在命令行中输入生成的可执行文件的名称来运行程序
-
-### 输出调试：g++ -g .\九九乘法表.cpp -o MyDeBugTest
-
-和第一步过程一样，但输出的可执行文件带了调试信息，并且指定了名称
+1、通过 settings.json 配置 Code Runner
+    进入 设置 → 工作区 → 搜索 “Code Runner” → 点击 Edit in settings.json，配置如下：
+    "cpp": "cd $dir && g++ $fileName -IMulti_Func Multi_Func/Func.cpp -o $fileNameWithoutExt && $dir$fileNameWithoutExt"
+2、手动编译多文件
+    g++ main.cpp -IMulti_Func Multi_Func/Func.cpp -o main
+3. 调试配置
+    launch.json：用于配置调试信息，包括编译器选择（C 用 gcc，C++ 用 g++），不影响 “Run Code”。
+    task.json：在调试前执行，用于生成 .exe 文件。调试多文件时需在其中配置所有相关源码文件路径。
+    settings.json: 是VS Code众多配置文件中的一个，可以编辑VS Code的页面风格、代码格式、字体颜色大小等，例如:自动保存、字体、文件编码等，该文件能影响Code Run
+    在设置->工作区->搜索 code run–>选择 Code-runner:Executor Map 设置编译参数，点击编辑，会在 .vscode 生成 settings.json
+    ⚠️ 注意：使用右上角调试按钮时依赖 launch.json 和 task.json；使用右键 “Run Code” 生成的可执行文件位于项目根目录。
 
 ## Tips
 
-1、通过 ls 命令查看当前文件夹下所有文件的名称、类型、字节数、最后修改时间
-2、对文件编译和调试，需要在文件的父级文件夹目录下进行，注意不能是祖父级
-9、在运行和调试时，相关配置和命令行操作能直接写文件名字的说明该文件直属于项目文件夹，是项目文件夹的子级，如果该文件是项目文件夹的孙级或者非子级，则需要指明路径，例如 main.cpp 和 Multi_Func/Func.cpp 的区别
-3、使用 camke.. 命令时，也需要在父级文件夹下操作（cd .\build\）
-4、cd ..进入父级文件夹
-5、launch.json 文件用于配置调试信息，包括显示信息和编译器选择，C语言用gcc，C++用g++，该文件不影响Code Run
-6、task.json 文件一般在launch.json 之前执行，用于生成.exe 文件，launch.json 可配置其是否执行，task.json 文件不影响Code Run
-7、settings.json 文件是VS Code众多配置文件中的一个，可以对VS Code进行页面风格、代码格式、字体颜色大小等 的编辑设置，例如:自动保存、字体、文件编码等，该文件能影响Code Run
-在设置->工作区->搜索 code run–>选择 Code-runner:Executor Map 设置编译参数，点击编辑，会在 .vscode 生成 settings.json
-8、vscode设置界面分用户区和工作区
-用户区：会应用于该用户打开的所有的工程，配置一些基础、常用、共用的配置。
-工作区：仅适用于vscdoe打开的当前目录。
-9、运行时额外编译特定文件操作：settings.json 中 "cpp": "cd $dir && g++ $fileName -IFunc Func/Func.cpp -o $fileNameWithoutExt &&      $dir$fileNameWithoutExt"
-g++ main.cpp -IMulti_Func Multi_Func/Func.cpp -o main
-10、调试时也需要先编译所有相关代码文件，然后输出可执行文件，该过程由task.json 控制
-如果要调试多文件，则需在task.json 中配置要编译的额外文件
-11、按下F1，弹出设置栏
-12、build文件夹是cmake运行产生的中间文件,cmake 调试时产生的可执行文件就位于该文件夹下
-13、cmake 调试和g++ 调试是两码事，这是两个不同的工具，前者通过下方工具栏调试，通过CMakeLists.txt 进行配置，后者通过右上角按钮调试，通过task.json 和 launch.json 配置
-14、使用cmake ..命令重新构建工程，会重新建立build文件夹及其子项
-15、mingw32-make.exe：在build文件夹下生成可执行文件
-16、rm * 删除终端当前所在目录下的所有文件，eg：PS D:\A_Project\C++\Code\C++_study>
+### 基础操作及概念
+
+1、查看文件信息
+    使用 ls 命令可以查看当前目录下文件的名称、类型、大小和最后修改时间。
+2、文件层级与路径
+    编译和调试应在文件的父级目录下执行，不能是祖父级目录。
+    运行或调试时，若文件直接位于项目根目录下，可直接使用文件名（如 main.cpp）；若文件位于子目录中，则需指明路径（如 Multi_Func/Func.cpp）。
+    使用 cd .. 可返回上一级目录（. 表示当前目录）。
+3、删除文件
+    使用 rm * 可删除当前目录下的所有文件，例如在路径 D:\A_Project\C++\Code\C++_study> 下执行。
+4、VS Code 配置层级
+    用户区：适用于该用户打开的所有项目，用于配置通用设置。
+    工作区：仅适用于当前打开的目录，可覆盖用户区设置。
+
+### CMake
+
+1、基本概念
+    CMake 是跨平台构建工具，通过 CMakeLists.txt 配置文件生成平台相关的 Makefile，无需手动编写。
+2、使用步骤
+    编写 CMakeLists.txt：指定要编译的源码及输出文件名。
+    构建项目：在 build 目录下终端输入执行：cmake ../cmake .，生成 Makefile 文件
+    编译项目：make，在 build 目录下生成可执行文件（如 main.exe）
+    运行程序：main，其中 main 是在 CMakeLists.txt 中定义的可执行文件名称
+3、程序内容有修改时，使用 make clean 删除之前的可执行文件，再执行 make 重新编译程序
+4、可直接点击 VS Code 底部工具栏的“三角形”运行按钮，自动完成编译与执行
+
+### g++ 与 CMake 的区别
+
+1、g++ 调试
+    通过 task.json 和 launch.json 配置，点击右上角调试按钮执行。
+2、CMake 调试
+    通过 CMakeLists.txt 配置，使用下方工具栏中的 CMake 工具进行构建和调试。
+3、3种程序运行方式：右键run code，g++ .\xxx.cpp ，cmake->make->main
+
+### 补充技巧
+
+1、按下 F1 可打开命令面板，快速访问各类设置与操作。
+2、若未安装 CMake 工具，编译多文件项目需通过修改 settings.json 实现，过程较为繁琐。
+3、在 VS Code 中开发 C/C++ 项目时：
+    轻量级、文件较少时，可使用 g++ 配合 settings.json 快速编译运行；
+    项目较复杂或需跨平台构建时，推荐使用 CMake 进行管理。
