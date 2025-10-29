@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "d:/A_Project/C++/Code/C++_study/build"
+			"value" : "d:/A_Project/01 learning_notes/C++/C++_study/build"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -459,7 +459,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Program Files/cmake-3.17.0-rc3-win64-x64/cmake-3.17.0-rc3-win64-x64/bin/cmake-gui.exe"
+			"value" : "D:/A_Tool/Qt/Tools/CMake_64/bin/cmake-gui.exe"
 		},
 		{
 			"name" : "CMAKE_EXECUTABLE_FORMAT",
@@ -587,7 +587,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/A_Project/C++/Code/C++_study/build/CMakeFiles/pkgRedirects"
+			"value" : "D:/A_Project/01 learning_notes/C++/C++_study/build/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -659,7 +659,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "D:/A_Project/C++/Code/C++_study"
+			"value" : "D:/A_Project/01 learning_notes/C++/C++_study"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1295,7 +1295,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/A_Project/C++/Code/C++_study/build"
+			"value" : "D:/A_Project/01 learning_notes/C++/C++_study/build"
 		},
 		{
 			"name" : "Pro_MyMulti_99_IS_TOP_LEVEL",
@@ -1319,7 +1319,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/A_Project/C++/Code/C++_study"
+			"value" : "D:/A_Project/01 learning_notes/C++/C++_study"
 		},
 		{
 			"name" : "_CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED",
