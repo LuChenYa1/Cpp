@@ -1,6 +1,5 @@
 cmake_minimum_required(VERSION 3.17)
-project(Pro_MyMulti_99) # 起一个项目名称
-
+project(Pro_MyMulti) # 起一个项目名称
 
 # 1、普通写法:挨个列举
 # add_executable(
@@ -26,9 +25,17 @@ project(Pro_MyMulti_99) # 起一个项目名称
 #    ${SRC_LIST})
 
 # 4、向工程添加多个指定头文件的搜索路径，路径之间用空格分隔：存在子级文件夹
+
+# 设置默认构建类型为 Debug（如果未指定）
+if(NOT CMAKE_BUILD_TYPE)
+    set(CMAKE_BUILD_TYPE Debug)
+endif()
+
+message(STATUS "Build type: ${CMAKE_BUILD_TYPE}")
+
 include_directories(Multi_Func) 
 aux_source_directory(Multi_Func SRC_LIST)
 add_executable(
-    DeBug 
+    DeBug
     DeBug.cpp 
     ${SRC_LIST})

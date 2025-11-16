@@ -27,7 +27,7 @@
 					[
 						0
 					],
-					"name" : "Pro_MyMulti_99",
+					"name" : "Pro_MyMulti",
 					"targetIndexes" : 
 					[
 						0
@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "DeBug::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-DeBug-Debug-9e0891e9510a21203608.json",
+					"jsonFile" : "target-DeBug-Debug-85198d9fe0e888d259f8.json",
 					"name" : "DeBug",
 					"projectIndex" : 0
 				}

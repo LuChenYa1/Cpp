@@ -20,6 +20,7 @@ void isInCircle(Circle C, Point P)
 
 int main(void)
 {
+    // 测试点是否在圆内
     Circle C;
     C.SetR(10);
     Point Center;
